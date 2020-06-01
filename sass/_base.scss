@@ -1,44 +1,3 @@
-:root {
-	--body-font: "Manrope", sans-serif;
-
-	--body-bg: #f2f2f2;
-	--theme-bg: #fafafa;
-	--border-color: #efefef;
-	--header-bg: #fff;
-
-	--theme-color-1: #b3b3b3;
-	--theme-color-2: #808080;
-	--theme-color-3: #494949;
-
-	--logo-color: #f13a2f;
-	--accent-color-2: #10ac84;
-
-	--accent: var(--logo-color);
-
-	--red-1: #ea2027;
-	--red-2: #b83d43;
-	--green-1: #0f9775;
-	--blue-1: #2f89fc;
-	--purple-1: #5f27cd;
-	--purple-2: #9c1de7;
-	--purple-3: #6a5287;
-	--orange-1: #ffa010;
-	--orange-1: #f49f35;
-	--brown-1: #6e3b3b;
-	--brown-2: #94877b;
-	--pink-1: #ef5777;
-	--pink-2: #ff1f5a;
-}
-
-.dark-mode {
-	--body-bg: #1e222b;
-	--theme-bg: #212835;
-	--border-color: #393f50;
-	--header-bg: #323a4b;
-	--theme-color-1: #fefffd;
-	--theme-color-2: #dddee0;
-	--theme-color-3: #dddee0;
-}
 * {
 	margin: 0;
 	padding: 0;
@@ -72,12 +31,6 @@ ul {
 	list-style: none;
 }
 
-.icon {
-	height: 2.4rem;
-	width: 2.4rem;
-	cursor: pointer;
-}
-
-*:focus {
+:focus {
 	outline: none;
 }

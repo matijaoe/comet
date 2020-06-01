@@ -11,9 +11,12 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="app.js"></script>
+
     </head>
 
     <!-- <body class="dark-mode"> -->
+
     <body>
         <div class="app-wrapper">
             <header class="header">
@@ -39,10 +42,10 @@
                 </nav>
 
                 <div class="user-nav">
-                    <div class="btn btn--outline" id="upload-button">
+                    <button class="btn btn--outline">
                         <ion-icon name="cloud-upload" class="icon"></ion-icon>
                         <a href="#">Upload</a>
-                    </div>
+                    </button>
                     <div class="user-nav__icon--notifications">
                         <ion-icon name="notifications" class="icon"></ion-icon>
                     </div>
@@ -52,7 +55,7 @@
                     </div>
             </header>
 
-            <div class="app-content">
+            <div class="main-wrapper">
                 <aside class="aside">
                     <ul class="aside__list">
                         <li class="aside__item">
@@ -187,89 +190,89 @@
                         <button class="btn btn--outline">Show More</button>
                     </ul>
 
-                    <ul class="aside__list"  id="categories">
+                    <ul class="aside__list" id="categories">
                         <h2 class="aside__heading"">Popular channels</h2>
-                        <li class="aside__item">
+                        <li class=" aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
                                     <ion-icon name="musical-notes" class="aside__icon icon music"></ion-icon>
                                 </div>
                                 Music
                             </a>
-                        </li>
-                        <li class="aside__item">
-                            <a href="#" class="aside__link">
-                                <div class="aside__placeholder">
-                                    <ion-icon name="game-controller" class="aside__icon icon gaming"></ion-icon>
-                                </div>
-                                Gaming
-                            </a>
-                        </li>
-                        <li class="aside__item">
-                            <a href="#" class="aside__link">
-                                <div class="aside__placeholder">
-                                    <ion-icon name="happy" class="aside__icon icon comedy"></ion-icon>
-                                </div>
-                                Comedy
-                            </a>
-                        </li>
-                        <li class="aside__item">
-                            <a href="#" class="aside__link">
-                                <div class="aside__placeholder">
-                                    <ion-icon name="videocam" class="aside__icon icon movie"></ion-icon>
-                                </div>
-                                Movie
-                            </a>
-                        </li>
-                        <li class="aside__item">
-                            <a href="#" class="aside__link">
-                                <div class="aside__placeholder">
-                                    <ion-icon name="fast-food" class="aside__icon icon food"></ion-icon>
-                                </div>
-                                Food
-                            </a>
-                        </li>
-                        <li class="aside__item">
-                            <a href="#" class="aside__link">
-                                <div class="aside__placeholder">
-                                    <ion-icon name="barbell" class="aside__icon icon fitness"></ion-icon>
-                                </div>
-                                Fitness
-                            </a>
-                        </li>
-                        <li class="aside__item">
-                            <a href="#" class="aside__link">
-                                <div class="aside__placeholder">
-                                    <ion-icon name="american-football" class="aside__icon icon sport"></ion-icon>
-                                </div>
-                                Sport
-                            </a>
-                        </li>
-                        <li class="aside__item">
-                            <a href="#" class="aside__link">
-                                <div class="aside__placeholder">
-                                    <ion-icon name="paw" class="aside__icon icon animal"></ion-icon>
-                                </div>
-                                Animal
-                            </a>
-                        </li>
-                        <li class="aside__item">
-                            <a href="#" class="aside__link">
-                                <div class="aside__placeholder">
-                                    <ion-icon name="planet" class="aside__icon icon science"></ion-icon>
-                                </div>
-                                Science
-                            </a>
-                        </li>
-                        <li class="aside__item">
-                            <a href="#" class="aside__link">
-                                <div class="aside__placeholder">
-                                    <ion-icon name="briefcase" class="aside__icon icon business"></ion-icon>
-                                </div>
-                                Business
-                            </a>
-                        </li>
-                        <button class="btn btn--outline">Show More</button>
+                            </li>
+                            <li class="aside__item">
+                                <a href="#" class="aside__link">
+                                    <div class="aside__placeholder">
+                                        <ion-icon name="game-controller" class="aside__icon icon gaming"></ion-icon>
+                                    </div>
+                                    Gaming
+                                </a>
+                            </li>
+                            <li class="aside__item">
+                                <a href="#" class="aside__link">
+                                    <div class="aside__placeholder">
+                                        <ion-icon name="happy" class="aside__icon icon comedy"></ion-icon>
+                                    </div>
+                                    Comedy
+                                </a>
+                            </li>
+                            <li class="aside__item">
+                                <a href="#" class="aside__link">
+                                    <div class="aside__placeholder">
+                                        <ion-icon name="videocam" class="aside__icon icon movie"></ion-icon>
+                                    </div>
+                                    Movie
+                                </a>
+                            </li>
+                            <li class="aside__item">
+                                <a href="#" class="aside__link">
+                                    <div class="aside__placeholder">
+                                        <ion-icon name="fast-food" class="aside__icon icon food"></ion-icon>
+                                    </div>
+                                    Food
+                                </a>
+                            </li>
+                            <li class="aside__item">
+                                <a href="#" class="aside__link">
+                                    <div class="aside__placeholder">
+                                        <ion-icon name="barbell" class="aside__icon icon fitness"></ion-icon>
+                                    </div>
+                                    Fitness
+                                </a>
+                            </li>
+                            <li class="aside__item">
+                                <a href="#" class="aside__link">
+                                    <div class="aside__placeholder">
+                                        <ion-icon name="american-football" class="aside__icon icon sport"></ion-icon>
+                                    </div>
+                                    Sport
+                                </a>
+                            </li>
+                            <li class="aside__item">
+                                <a href="#" class="aside__link">
+                                    <div class="aside__placeholder">
+                                        <ion-icon name="paw" class="aside__icon icon animal"></ion-icon>
+                                    </div>
+                                    Animal
+                                </a>
+                            </li>
+                            <li class="aside__item">
+                                <a href="#" class="aside__link">
+                                    <div class="aside__placeholder">
+                                        <ion-icon name="planet" class="aside__icon icon science"></ion-icon>
+                                    </div>
+                                    Science
+                                </a>
+                            </li>
+                            <li class="aside__item">
+                                <a href="#" class="aside__link">
+                                    <div class="aside__placeholder">
+                                        <ion-icon name="briefcase" class="aside__icon icon business"></ion-icon>
+                                    </div>
+                                    Business
+                                </a>
+                            </li>
+                            <button class="btn btn--outline">Show More</button>
                     </ul>
                 </aside>
                 <main class="main">

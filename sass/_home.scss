@@ -1,137 +1,16 @@
 .app-wrapper {
-    max-width: 140rem;
+	max-width: 140rem;
 	margin: 0 auto;
-    height: 100vh;
-    display: flex;
-    
-    flex-direction: column;
-    background: var(--theme-bg);
-    overflow: hidden;
+	height: 100vh;
 
+	display: flex;
+	flex-direction: column;
+
+	background: var(--theme-bg);
+	overflow: hidden;
 }
 
-.app-content {
-    display: flex;
-    overflow: auto;
-
-
-
-}
-
-.aside {
-	flex: 0 0 26rem;
-	font-size: 0.85em;
-    font-weight: 500;
-	border-right: $border;
-    color: var(--theme-color-2);
-    overflow: auto;
-	scrollbar-width: thin;
-
-    
-
-	> * {
-		border-bottom: $border;
-
-		&:last-child {
-			border: none;
-		}
-	}
-
-	&__list {
-		padding: 2em;
-		padding-bottom: 1.8em;
-	}
-
-	&__item {
-		margin-bottom: 0.5em;
-
-		&:last-of-type {
-			margin-bottom: 0;
-		}
-	}
-
-	&__link {
-		display: flex;
-		align-items: center;
-		padding: 0.5em 0;
-
-		&:hover,
-		&:focus {
-			color: var(--theme-color-3);
-
-			& .aside__icon {
-				color: var(--theme-color-2);
-			}
-		}
-	}
-
-	&__placeholder {
-		flex: 0 0 5rem;
-		display: flex;
-		align-items: center;
-	}
-
-	&__icon {
-		width: 1.6em;
-		height: 1.6em;
-		color: var(--theme-color-1);
-	}
-
-	&__photo {
-		width: 3rem;
-		height: 3rem;
-		border-radius: 50%;
-	}
-
-	&__heading {
-		font-size: 1.1em;
-		margin-bottom: 1.2em;
-	}
-
-	button {
-		margin-top: 1.4em;
-	}
-}
-
-#categories {
-	.aside__link:hover {
-		.music {
-			color: var(--red-1);
-		}
-		.gaming {
-			color: var(--green-1);
-		}
-		.comedy {
-			color: var(--orange-1);
-		}
-		.food {
-			color: var(--pink-2);
-		}
-		.fitness {
-			color: var(--blue-1);
-		}
-		.sport {
-			color: var(--brown-2);
-		}
-		.animal {
-			color: var(--pink-1);
-		}
-		.science {
-			color: var(--purple-1);
-		}
-		.movie {
-			color: var(--red-2);
-		}
-		.business {
-			color: var(--brown-1);
-		}
-	}
-}
-
-.main {
-    flex: 1;
-    overflow: auto;
-	scrollbar-width: thin;
-
-    
+.main-wrapper {
+	display: flex;
+	overflow: auto;
 }

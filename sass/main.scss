@@ -1,6 +1,8 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "components/btn";
+@import "layout/aside";
+@import "layout/content";
+@import "layout/header";
 @import "base";
-@import "components";
-@import "variables";
-@import "header";
 @import "home";
-
