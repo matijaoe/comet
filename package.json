@@ -1,0 +1,14 @@
+{
+	"name": "video-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"watch:sass": "node-sass sass/main.scss css/style.css -w"
+	},
+	"author": "Matija Osrecki",
+	"license": "ISC",
+	"devDependencies": {
+		"node-sass": "^4.14.1"
+	}
+}

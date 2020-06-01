@@ -1,0 +1,150 @@
+.header {
+	background: var(--header-bg);
+	display: flex;
+	justify-content: space-between;
+	padding: 0 2.4em;
+
+	font-size: 0.9em;
+	font-weight: 700;
+
+	border-bottom: $border;
+
+	> * {
+		padding: 1.2em 0;
+	}
+
+	&__left {
+		flex: 0 0 30%;
+		display: flex;
+		align-items: center;
+	}
+
+	&__menu {
+		flex: 0;
+	}
+
+	&__menu-icon {
+		height: 2.8rem;
+		width: 2.8rem;
+		vertical-align: middle;
+	}
+
+	&__logo {
+		border-radius: 50%;
+		height: 4rem;
+		width: 4rem;
+		border: 6px solid var(--logo-color);
+		margin: 0 2em;
+		margin-right: 2em;
+	}
+}
+
+.form {
+	display: flex;
+
+	&__search-btn {
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.6em;
+		z-index: 2;
+	}
+
+	&__search-icon {
+		color: var(--theme-color-1);
+		vertical-align: middle;
+		height: 1.8rem;
+		width: 1.8rem;
+	}
+
+	&__searchbar {
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: 500;
+
+		background: transparent;
+		color: var(--theme-color-2);
+		border-radius: 100rem;
+		border: 3px solid transparent;
+
+		padding: 0.5em 3.25em;
+		margin-left: -2.65em;
+
+		&:hover,
+		&:focus {
+			border-color: var(--border-color);
+		}
+
+		&::placeholder {
+			color: inital;
+		}
+	}
+}
+
+.nav {
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: flex;
+		margin: 0 1.2em;
+		padding: 0.2em;
+
+		position: relative;
+
+		&:hover,
+		&:focus,
+		&.active {
+			color: var(--accent);
+		}
+
+		&.dot::after {
+			content: "";
+			width: 0.6rem;
+			height: 0.6rem;
+			border-radius: 50%;
+			background: var(--accent);
+			position: absolute;
+			top: 0.4rem;
+			right: -0.6rem;
+		}
+	}
+}
+
+.user-nav {
+	flex: 0 0 30%;
+	padding-left: 8%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	> * {
+		cursor: pointer;
+	}
+
+	&__user-photo {
+		border-radius: 50%;
+	}
+
+	&__icon--notifications {
+		color: var(--theme-color-1);
+		display: flex;
+		align-items: center;
+		margin-left: 0.6em;
+	}
+
+	&__icon--dropdown {
+		color: var(--theme-color-1);
+		display: flex;
+		align-items: center;
+	}
+}

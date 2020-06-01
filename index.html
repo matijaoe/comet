@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>App</title>
+        <meta name="author" content="Matija Osrečki">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <!-- <body class="dark-mode"> -->
+    <body>
+        <div class="app-wrapper">
+            <header class="header">
+                <div class="header__left">
+                    <div class="header__menu">
+                        <ion-icon name="menu-outline" class="header__menu-icon icon"></ion-icon>
+                    </div>
+                    <div class="header__logo"></div>
+                    <form action="" class="form">
+                        <button class="form__search-btn">
+                            <ion-icon name="search" class="form__search-icon"></ion-icon>
+                        </button>
+                        <input type="text" name="search" id="search" class="form__searchbar" placeholder="Type in search..." autocomplete="off">
+                    </form>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Categories</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link dot">Subscriptions</a></li>
+                    </ul>
+                </nav>
+
+                <div class="user-nav">
+                    <div class="btn btn--outline" id="upload-button">
+                        <ion-icon name="cloud-upload" class="icon"></ion-icon>
+                        <a href="#">Upload</a>
+                    </div>
+                    <div class="user-nav__icon--notifications">
+                        <ion-icon name="notifications" class="icon"></ion-icon>
+                    </div>
+                    <img class="user-nav__user-photo" src="img/user1.jpg" alt="user" width="40" height="40">
+                    <div class="user-nav__icon--dropdown">
+                        <ion-icon name="chevron-down" class="icon"></ion-icon>
+                    </div>
+            </header>
+
+            <div class="app-content">
+                <aside class="aside">
+                    <ul class="aside__list">
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="home" class="aside__icon icon"></ion-icon>
+                                </div>
+                                Homepage
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="person-circle" class="aside__icon icon"></ion-icon>
+                                </div>
+                                My channel
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="star" class="aside__icon icon"></ion-icon>
+                                </div>
+                                Trending
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="logo-youtube" class="aside__icon icon"></ion-icon>
+                                </div>
+                                Subscriptions
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="play-back-circle" class="aside__icon icon"></ion-icon>
+                                </div>
+                                History
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="time" class="aside__icon icon"></ion-icon>
+                                </div>
+                                Watch later
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="thumbs-up" class="aside__icon icon"></ion-icon>
+                                </div>
+                                Liked videos
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="play-forward" class="aside__icon icon"></ion-icon>
+                                </div>
+                                Playlists
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="aside__list">
+                        <h2 class="aside__heading">Subscriptions</h2>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <img src="img/user2.jpg" alt="user" class="user-photo aside__photo">
+                                </div>
+                                Stan Hudson
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <img src="img/user3.jpg" alt="user" class="user-photo aside__photo">
+                                </div>
+                                Jim Pesos
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <img src="img/user4.jpg" alt="user" class="user-photo aside__photo">
+                                </div>
+                                Lola Spaghetti
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <img src="img/user5.jpg" alt="user" class="user-photo aside__photo">
+                                </div>
+                                Pink Guy
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <img src="img/user6.jpg" alt="user" class="user-photo aside__photo">
+                                </div>
+                                Robert Glover
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder"><img src="img/user7.jpg" alt="user" class="user-photo aside__photo">
+                                </div>
+                                Gym Bro
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder"><img src="img/user8.jpg" alt="user" class="user-photo aside__photo">
+                                </div>
+                                Mark Ocean
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder"><img src="img/user9.jpg" alt="user" class="user-photo aside__photo">
+                                </div>
+                                Lea Vercel
+                            </a>
+                        </li>
+                        <button class="btn btn--outline">Show More</button>
+                    </ul>
+
+                    <ul class="aside__list"  id="categories">
+                        <h2 class="aside__heading"">Popular channels</h2>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="musical-notes" class="aside__icon icon music"></ion-icon>
+                                </div>
+                                Music
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="game-controller" class="aside__icon icon gaming"></ion-icon>
+                                </div>
+                                Gaming
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="happy" class="aside__icon icon comedy"></ion-icon>
+                                </div>
+                                Comedy
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="videocam" class="aside__icon icon movie"></ion-icon>
+                                </div>
+                                Movie
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="fast-food" class="aside__icon icon food"></ion-icon>
+                                </div>
+                                Food
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="barbell" class="aside__icon icon fitness"></ion-icon>
+                                </div>
+                                Fitness
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="american-football" class="aside__icon icon sport"></ion-icon>
+                                </div>
+                                Sport
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="paw" class="aside__icon icon animal"></ion-icon>
+                                </div>
+                                Animal
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="planet" class="aside__icon icon science"></ion-icon>
+                                </div>
+                                Science
+                            </a>
+                        </li>
+                        <li class="aside__item">
+                            <a href="#" class="aside__link">
+                                <div class="aside__placeholder">
+                                    <ion-icon name="briefcase" class="aside__icon icon business"></ion-icon>
+                                </div>
+                                Business
+                            </a>
+                        </li>
+                        <button class="btn btn--outline">Show More</button>
+                    </ul>
+                </aside>
+                <main class="main">
+
+                </main>
+            </div>
+
+        </div>
+
+
+
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    </body>
+
+</html>
