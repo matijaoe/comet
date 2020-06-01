@@ -1,12 +1,14 @@
 :root {
-  --body-font: "Manrope", sans-serif;
+  --body-font: 'Work Sans', "Manrope", sans-serif;
   --body-bg: #f2f2f2;
   --theme-bg: #fafafa;
   --border-color: #efefef;
   --header-bg: #fff;
   --theme-color-1: #b3b3b3;
+  --theme-color-1-opaque: hsla(0, 0%, 70%, 0.3);
   --theme-color-2: #808080;
   --theme-color-3: #494949;
+  --black-opaque: rgba(0, 0, 0, 0.25);
   --logo-color: #f13a2f;
   --accent: var(--logo-color);
   --red-1: #ea2027;
@@ -33,20 +35,30 @@
   --theme-color-3: #dddee0; }
 
 .btn {
-  font-size: 0.85em;
-  padding: 0.8em 1.8em;
+  font-size: 0.9em;
+  padding: 0.8em 1.4em;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-weight: 600; }
+  font-weight: 500;
+  transition: all 200ms; }
   .btn--outline {
     color: var(--theme-color-2);
     background: transparent;
-    border: 0.25rem solid var(--border-color);
+    border: 0.22rem solid var(--border-color);
     border-radius: 100rem; }
     .btn--outline:hover, .btn--outline:focus {
       background: var(--border-color); }
+  .btn--dual:first-of-type {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-right: 1em; }
+  .btn--dual:last-of-type {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+    padding-left: 1em; }
   .btn .icon {
     color: var(--theme-color-1);
     height: 1.8rem;
@@ -56,14 +68,108 @@
     top: 1px; }
 
 .icon {
-  height: 2.4rem;
-  width: 2.4rem;
   cursor: pointer; }
+
+.profile {
+  background: var(--header-bg);
+  box-shadow: 0.1rem 0.3rem 0.6rem rgba(0, 0, 0, 0.04);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-weight: 500; }
+  .profile__hero {
+    height: 23rem;
+    background: url(../../img/adventure-calm-clouds-dawn-414171.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--header-bg); }
+  .profile__contact {
+    display: flex;
+    flex: 1;
+    margin-left: auto;
+    align-items: center;
+    padding: 2em; }
+  .profile__contact-container {
+    height: 3.4em;
+    width: 3.4em;
+    border-radius: 50%;
+    border: 0.2rem solid var(--theme-color-1-opaque);
+    margin: 0 0.3em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms; }
+    .profile__contact-container:hover, .profile__contact-container:focus {
+      background: var(--theme-color-1-opaque); }
+  .profile__icon {
+    width: 1.6em;
+    height: 1.6em; }
+  .profile__info {
+    flex: 0 0 40%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--black-opaque); }
+  .profile__info-item {
+    display: flex;
+    align-items: center;
+    margin: 0 1.5em; }
+  .profile__info-data {
+    margin-left: 0.8em; }
+  .profile__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.8em; }
+  .profile__user {
+    display: flex;
+    align-items: center; }
+  .profile__photo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 1.5em; }
+  .profile__name {
+    color: var(--theme-color-3); }
+  .profile__menu-nav {
+    display: flex;
+    align-items: stretch; }
+  .profile__menu-link {
+    padding: 2em 0;
+    margin: 0 1em;
+    position: relative;
+    transition: all 200ms; }
+    .profile__menu-link::before {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0.3rem;
+      padding: 0;
+      margin: 0;
+      background: var(--accent);
+      transform: scale(0, 1);
+      transition: transform 350ms; }
+    .profile__menu-link:hover, .profile__menu-link:focus {
+      color: var(--accent); }
+    .profile__menu-link:hover::before,
+    .profile__menu-link:focus ::before {
+      color: var(--accent);
+      transform: scale(1, 1); }
+  .profile__menu-buttons {
+    display: flex; }
+    .profile__menu-buttons .btn {
+      color: var(--theme-color-1); }
 
 .aside {
   flex: 0 0 26rem;
   font-size: 0.9em;
-  font-weight: 500;
   border-right: 3px solid var(--border-color);
   color: var(--theme-color-2);
   overflow: auto;
@@ -100,6 +206,7 @@
     height: 3rem;
     border-radius: 50%; }
   .aside__heading {
+    font-weight: 600;
     font-size: 1.1em;
     margin-bottom: 1.2em; }
   .aside button {
@@ -135,18 +242,17 @@
 #categories .aside__link:hover .business {
   color: var(--brown-1); }
 
-.main {
+.content {
   flex: 1;
   overflow: auto;
-  scrollbar-width: thin; }
+  scrollbar-width: thin;
+  padding: 2em; }
 
 .header {
   background: var(--header-bg);
   display: flex;
   justify-content: space-between;
   padding: 0 2.4em;
-  font-size: 0.9em;
-  font-weight: 700;
   border-bottom: 3px solid var(--border-color);
   box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.01); }
   .header > * {
@@ -185,13 +291,14 @@
   .form__searchbar {
     font-family: inherit;
     font-size: inherit;
-    font-weight: 500;
+    font-weight: 400;
     background: transparent;
     color: var(--theme-color-2);
     border-radius: 100rem;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
     padding: 0.5em 3.25em;
-    margin-left: -2.65em; }
+    margin-left: -2.65em;
+    transition: all 200ms; }
     .form__searchbar:hover, .form__searchbar:focus {
       border-color: var(--border-color); }
     .form__searchbar::placeholder {
@@ -208,6 +315,7 @@
     display: flex;
     margin: 0 1.2em;
     padding: 0.2em;
+    font-weight: 500;
     position: relative; }
     .nav__link:hover, .nav__link:focus, .nav__link.active {
       color: var(--accent); }
@@ -256,7 +364,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--body-font);
   background: var(--body-bg);
   color: var(--theme-color-1);
   font-weight: 400; }

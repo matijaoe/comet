@@ -1,7 +1,6 @@
 .aside {
 	flex: 0 0 26rem;
 	font-size: 0.9em;
-    font-weight: 500;
 	border-right: $border;
     color: var(--theme-color-2);
     overflow: auto;
@@ -63,6 +62,7 @@
 	}
 
 	&__heading {
+		font-weight: 600;
 		font-size: 1.1em;
 		margin-bottom: 1.2em;
 	}

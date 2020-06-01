@@ -1,5 +1,8 @@
-.main {
+.content {
     flex: 1;
     overflow: auto;
-	scrollbar-width: thin;  
+    @include scrollbar;
+
+    padding: 2em;
 }
+

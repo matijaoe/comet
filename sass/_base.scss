@@ -16,7 +16,7 @@ html {
 
 body {
 	font-size: 1.6rem;
-	font-family: "Manrope", sans-serif;
+	font-family: var(--body-font);
 	background: var(--body-bg);
 	color: var(--theme-color-1);
 	font-weight: 400;

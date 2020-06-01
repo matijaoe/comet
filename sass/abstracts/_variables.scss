@@ -1,23 +1,25 @@
 $border: 3px solid var(--border-color);
 
 :root {
-	--body-font: "Manrope", sans-serif;
+	--body-font: 'Work Sans', "Manrope", sans-serif;
 
-    // LIGHT MODE
+	// LIGHT MODE
 	--body-bg: #f2f2f2;
 	--theme-bg: #fafafa;
 	--border-color: #efefef;
 	--header-bg: #fff;
 
 	--theme-color-1: #b3b3b3;
+	--theme-color-1-opaque: hsla(0, 0%, 70%, 0.3);
 	--theme-color-2: #808080;
 	--theme-color-3: #494949;
+	--black-opaque: rgba(0, 0, 0, 0.25);
 
-    // UNIVERSAL
+	// UNIVERSAL
 	--logo-color: #f13a2f;
-    --accent: var(--logo-color);
-    
-    // COLORS
+	--accent: var(--logo-color);
+
+	// COLORS
 	--red-1: #ea2027;
 	--red-2: #b83d43;
 	--green-1: #0f9775;
