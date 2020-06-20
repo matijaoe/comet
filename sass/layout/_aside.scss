@@ -2,10 +2,9 @@
 	flex: 0 0 26rem;
 	font-size: 0.9em;
 	border-right: $border;
-    color: var(--theme-color-2);
-    overflow: auto;
+	color: var(--theme-color-2);
+	overflow: auto;
 	@include scrollbar;
-    
 
 	> * {
 		border-bottom: $border;
@@ -21,17 +20,17 @@
 	}
 
 	&__item {
-		margin-bottom: 0.5em;
+		// margin-bottom: 0.2em;
 
 		&:last-of-type {
-			margin-bottom: 0;
+			// margin-bottom: 0;
 		}
 	}
 
 	&__link {
 		display: flex;
 		align-items: center;
-		padding: 0.5em 0;
+		padding: 0.7em 0;
 
 		&:hover,
 		&:focus {
