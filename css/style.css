@@ -86,6 +86,15 @@ ul {
 .margin-r {
   margin-right: 0.6em; }
 
+.padding-big {
+  padding: 2em; }
+
+.border-top {
+  border-top: 3px solid var(--border-color); }
+
+.border-bottom {
+  border-bottom: 3px solid var(--border-color); }
+
 .btn {
   font-size: 0.85em;
   font-weight: 500;
@@ -228,40 +237,78 @@ ul {
   .profile__menu-buttons .btn {
     color: var(--theme-color-1); }
 
-.videos__header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2.2em 2em; }
-
-.videos__menu-trending {
-  display: flex;
-  flex: 1; }
-
-.videos__menu-button {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end; }
-
-.videos__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5em; }
-
-.videos__more {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2.2em 2em; }
-
-.videos__link {
-  display: flex;
-  align-items: center;
-  transition: all 200ms; }
-  .videos__link:hover {
-    color: var(--theme-color-2); }
-    .videos__link:hover .icon {
-      color: var(--theme-color-3); }
+.videos {
+  padding-top: 0; }
+  .videos__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.2em;
+    margin: 2em 0; }
+  .videos__menu-trending {
+    display: flex;
+    flex: 1; }
+  .videos__menu-button {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; }
+  .videos__link {
+    display: flex;
+    align-items: center;
+    transition: all 200ms; }
+    .videos__link:hover {
+      color: var(--theme-color-2); }
+      .videos__link:hover .icon {
+        color: var(--theme-color-3); }
+  .videos__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5em; }
+  .videos__more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2em;
+    margin: 3.5em 0 1.5em; }
+  .videos__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .videos__footer--left {
+      flex: 1;
+      justify-content: space-between; }
+      .videos__footer--left button:first-child {
+        margin-bottom: 0.8em; }
+    .videos__footer--right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between; }
+      .videos__footer--right button:first-child {
+        margin-bottom: 0.8em; }
+  .videos__nav {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.9em; }
+  .videos__nav--main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--theme-color-3);
+    margin-bottom: 2em; }
+  .videos__nav--secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .videos__nav-item {
+    margin: 0 1em; }
+  .videos__nav-link {
+    padding-bottom: 0.5em; }
+    .videos__nav-link:hover {
+      text-decoration: underline; }
 
 .video {
   background: var(--header-bg);
@@ -389,8 +436,7 @@ ul {
 .content {
   flex: 1;
   overflow: auto;
-  scrollbar-width: thin;
-  padding: 2em; }
+  scrollbar-width: thin; }
 
 .header {
   background: var(--header-bg);
@@ -493,3 +539,46 @@ ul {
     color: var(--theme-color-1);
     display: flex;
     align-items: center; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em; }
+  .footer__socials {
+    display: flex;
+    justify-content: center; }
+  .footer__icon-box {
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    display: grid;
+    place-content: center;
+    height: 3.6em;
+    width: 3.6em;
+    margin: 0 0.5em;
+    transition: all 250ms; }
+  .footer .facebook:hover {
+    color: #3b5998;
+    border-color: currentColor;
+    box-shadow: 0 0 4rem 0.3rem rgba(59, 89, 152, 0.5);
+    background: white; }
+  .footer .instagram:hover {
+    color: #c13584;
+    border-color: currentColor;
+    box-shadow: 0 0 4rem 0.3rem rgba(193, 53, 132, 0.4);
+    background: white; }
+  .footer .twitter:hover {
+    color: #1da1f2;
+    border-color: currentColor;
+    box-shadow: 0 0 4rem 0.3rem rgba(29, 161, 242, 0.4);
+    background: white; }
+  .footer .icon {
+    height: 1.6em;
+    width: 1.6em;
+    padding: 1em; }
+  .footer__terms {
+    display: flex; }
+  .footer__link:first-child {
+    margin-right: 1em; }
+  .footer__link:hover {
+    text-decoration: underline; }

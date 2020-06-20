@@ -1,10 +1,13 @@
 .videos {
+	padding-top: 0;
+
 	&__header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
-		padding: 2.2em 2em;
+		padding: 0 2.2em;
+		margin: 2em 0;
 	}
 
 	&__menu-trending {
@@ -18,19 +21,6 @@
 		justify-content: flex-end;
 	}
 
-	&__grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-		gap: 1.5em;
-	}
-
-	&__more {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 2.2em 2em;
-	}
-
 	&__link {
 		display: flex;
 		align-items: center;
@@ -42,6 +32,81 @@
 			.icon {
 				color: var(--theme-color-3);
 			}
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 1.5em;
+	}
+
+	&__more {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 2em;
+		margin: 3.5em 0 1.5em;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&--left {
+			flex: 1;
+			justify-content: space-between;
+
+			button:first-child {
+				margin-bottom: 0.8em;
+			}
+		}
+
+		&--right {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: space-between;
+
+			button:first-child {
+				margin-bottom: 0.8em;
+			}
+		}
+	}
+
+	&__nav {
+		flex: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		font-size: 0.9em;
+	}
+
+	&__nav--main {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--theme-color-3);
+		margin-bottom: 2em;
+	}
+
+	&__nav--secondary {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__nav-item {
+		margin: 0 1em;
+	}
+	&__nav-link {
+		padding-bottom: 0.5em;
+
+		&:hover {
+			// color: var(--theme-color-2);
+			text-decoration: underline;
 		}
 	}
 }
@@ -69,9 +134,8 @@
 		.video__title {
 			color: white;
 			z-index: 10;
-			text-shadow: 0 0 5px rgba(0, 0, 0, .3);
+			text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 			// transform: translateY(-1200%);
-
 		}
 
 		.video__info {

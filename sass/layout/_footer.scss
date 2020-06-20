@@ -1,0 +1,64 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.9em;
+
+	&__copyright {
+	}
+
+	&__socials {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__icon-box {
+		border-radius: 50%;
+		border: $border;
+		display: grid;
+		place-content: center;
+		height: 3.6em;
+		width: 3.6em;
+		margin: 0 0.5em;
+		transition: all 250ms;
+	}
+
+	.facebook:hover {
+		color: #3b5998;
+		border-color: currentColor;
+		box-shadow: 0 0 4rem 0.3rem rgba($color: #3b5998, $alpha: 0.5);
+		background: white;
+	}
+	.instagram:hover {
+		color: #c13584;
+		border-color: currentColor;
+		box-shadow: 0 0 4rem 0.3rem rgba($color: #c13584, $alpha: 0.4);
+		background: white;
+	}
+	.twitter:hover {
+		color: #1da1f2;
+		border-color: currentColor;
+		box-shadow: 0 0 4rem 0.3rem rgba($color: #1da1f2, $alpha: 0.4);
+		background: white;
+	}
+
+	.icon {
+		height: 1.6em;
+		width: 1.6em;
+		padding: 1em;
+	}
+
+	&__terms {
+		display: flex;
+	}
+
+	&__link {
+		&:first-child {
+			margin-right: 1em;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
