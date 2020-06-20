@@ -1,0 +1,130 @@
+.videos {
+	&__header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		padding: 2.2em 2em;
+	}
+
+	&__menu-trending {
+		display: flex;
+		flex: 1;
+	}
+
+	&__menu-button {
+		flex: 1;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 1.5em;
+	}
+
+	&__more {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2.2em 2em;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		transition: all 200ms;
+
+		&:hover {
+			color: var(--theme-color-2);
+
+			.icon {
+				color: var(--theme-color-3);
+			}
+		}
+	}
+}
+
+.video {
+	background: var(--header-bg);
+	border-radius: 0.5rem;
+	overflow: hidden;
+	box-shadow: 0.1rem 0.3rem 0.6rem rgba($color: black, $alpha: 0.04);
+
+	cursor: pointer;
+
+	display: flex;
+	flex-direction: column;
+
+	&:hover {
+		video {
+			transform: scale(1.7);
+		}
+
+		.video__desc {
+			transform: translateY(48%);
+		}
+
+		.video__title {
+			color: white;
+			z-index: 10;
+			text-shadow: 0 0 5px rgba(0, 0, 0, .3);
+			// transform: translateY(-1200%);
+
+		}
+
+		.video__info {
+			transform: translateY(100%);
+		}
+	}
+
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		transition: transform 450ms;
+		transform-origin: top;
+	}
+
+	&__desc {
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		transition: transform 450ms;
+		transform-origin: top;
+	}
+
+	&__title {
+		font-size: 0.9em;
+		font-weight: 500;
+		color: var(--theme-color-3);
+		text-transform: capitalize;
+		margin-bottom: 0.8em;
+
+		transition: all 350ms;
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		font-size: 0.75em;
+
+		transition: transform 600ms;
+		transform-origin: top;
+	}
+
+	&__user-photo {
+		border-radius: 50%;
+	}
+
+	&__user-name {
+		margin-left: 0.8em;
+		margin-right: 1.2em;
+	}
+
+	&__views {
+		margin-left: auto;
+	}
+}

@@ -9,8 +9,7 @@
 
 	&__hero {
 		height: 23rem;
-		background: url(../../img/adventure-calm-clouds-dawn-414171.jpg)
-			no-repeat;
+		background: url(../img/adventure-calm-clouds-dawn-414171.jpg) no-repeat;
 		background-size: cover;
 		background-position: center;
 
@@ -139,7 +138,6 @@
 	}
 
 	&__menu-buttons {
-		display: flex;
 
 		.btn {
 			color: var(--theme-color-1);

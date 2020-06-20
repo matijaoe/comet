@@ -9,10 +9,9 @@
 
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="app.js"></script>
 
     </head>
 
@@ -44,7 +43,7 @@
 
                 <div class="user-nav">
                     <button class="btn btn--outline">
-                        <ion-icon name="cloud-upload" class="icon"></ion-icon>
+                        <ion-icon name="cloud-upload" class="icon margin-r"></ion-icon>
                         <a href="#">Upload</a>
                     </button>
                     <div class="user-nav__icon--notifications">
@@ -278,7 +277,7 @@
                 </aside>
 
                 <main class="content">
-                    <div class="profile">
+                    <section class="profile">
                         <div class="profile__hero">
                             <div class="profile__contact">
                                 <div class="profile__contact-container">
@@ -321,13 +320,154 @@
                                 <a href="#" class="profile__menu-link">Playlists</a>
                                 <a href="#" class="profile__menu-link">About</a>
                             </nav>
-                            <div class="profile__menu-buttons">
-                                <button class="btn btn--outline btn--dual">645,217</button>
-                                <button class="btn btn--outline btn--dual">Follow</button>
+                            <div class="profile__menu-buttons btn--dual">
+                                <button class="btn btn--outline">645,217</button>
+                                <button class="btn btn--outline">Follow</button>
                             </div>
                         </div>
+                    </section>
 
-                    </div>
+                    <section class="videos">
+                        <header class="videos__header">
+                            <div class="videos__menu-trending">
+                                <a href="#" class="videos__link">
+                                    <ion-icon name="trending-up-outline" class="icon margin-r"></ion-icon>
+                                    <p>See what's trending</p>
+                                </a>
+                            </div>
+                            <div class="videos__menu-buttons btn--dual">
+                                <button class="btn btn--outline selected">Date Added</button>
+                                <button class="btn btn--outline">Most Popular</button>
+                            </div>
+                            <div class="videos__menu-button">
+                                <button class="btn btn--accent">
+                                    <ion-icon name="play" class="icon margin-r"></ion-icon>Play All
+                                </button>
+                            </div>
+                        </header>
+
+                        <section class="videos__grid">
+                            <div class="video">
+                                <video muted loop>
+                                    <source src="img/videos/video1.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__desc">
+                                    <h3 class="video__title">Car goes fast</h3>
+                                    <div class="video__info">
+                                        <img class="video__user-photo" src="img/user11.jpg" alt="user" width="32" height="32">
+                                        <p class="video__user-name">Dan Brumm</p>
+                                        <p class="video__views">17.9K views</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="video">
+                                <video muted loop>
+                                    <source src="img/videos/video2.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__desc">
+                                    <h3 class="video__title">Watching kids (tutorial)</h3>
+                                    <div class="video__info">
+                                        <img class="video__user-photo" src="img/user16.jpg" alt="user" width="32" height="32">
+                                        <p class="video__user-name">Matthias Tungst</p>
+                                        <p class="video__views">99k views</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="video">
+                                <video muted loop>
+                                    <source src="img/videos/video3.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__desc">
+                                    <h3 class="video__title">Campfire goes up in flames</h3>
+                                    <div class="video__info">
+                                        <img class="video__user-photo" src="img/user12.jpg" alt="user" width="32" height="32">
+                                        <p class="video__user-name">Jason Barilla</p>
+                                        <p class="video__views">854k views</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="video">
+                                <video muted loop>
+                                    <source src="img/videos/video4.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__desc">
+                                    <h3 class="video__title">Government is watching you</h3>
+                                    <div class="video__info">
+                                        <img class="video__user-photo" src="img/user17.jpg" alt="user" width="32" height="32">
+                                        <p class="video__user-name">Gabe Newport</p>
+                                        <p class="video__views">1.8M views</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="video">
+                                <video muted loop>
+                                    <source src="img/videos/video5.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__desc">
+                                    <h3 class="video__title">Social distancing is lame</h3>
+                                    <div class="video__info">
+                                        <img class="video__user-photo" src="img/user14.jpg" alt="user" width="32" height="32">
+                                        <p class="video__user-name">Fred Dier</p>
+                                        <p class="video__views">2.3M views</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="video">
+                                <video muted loop>
+                                    <source src="img/videos/video6.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__desc">
+                                    <h3 class="video__title">I'm quirky like that</h3>
+                                    <div class="video__info">
+                                        <img class="video__user-photo" src="img/user15.jpg" alt="user" width="32" height="32">
+                                        <p class="video__user-name">Berta Schnitzl</p>
+                                        <p class="video__views">17.9K views</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="video">
+                                <video muted loop>
+                                    <source src="img/videos/video7.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__desc">
+                                    <h3 class="video__title">Singing for clout</h3>
+                                    <div class="video__info">
+                                        <img class="video__user-photo" src="img/user13.jpg" alt="user" width="32" height="32">
+                                        <p class="video__user-name">Maddie Hover</p>
+                                        <p class="video__views">17.9K views</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="video">
+                                <video muted loop>
+                                    <source src="img/videos/video8.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__desc">
+                                    <h3 class="video__title">Bird and a midget</h3>
+                                    <div class="video__info">
+                                        <img class="video__user-photo" src="img/zeljko.jpg" alt="user" width="32" height="32">
+                                        <p class="video__user-name">Željko Stojanović</p>
+                                        <p class="video__views">13 views</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="videos__more">
+                            <a href="#" class="videos__link">
+                                <ion-icon name="reload-outline" class="icon margin-r"></ion-icon>
+                                <p>Load More</p>
+                            </a>
+
+
+                        </div>
+                    </section>
                 </main>
             </div>
 
@@ -336,6 +476,7 @@
 
 
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+        <script src="app.js"></script>
     </body>
 
 </html>

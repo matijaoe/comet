@@ -1,50 +1,66 @@
 .btn {
-	font-size: 0.9em;
+	font-size: 0.85em;
+	font-weight: 500;
+	font-family: inherit;
 	padding: 0.8em 1.4em;
+
+	border-radius: 100rem;
+	border: 0.22rem solid transparent;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	cursor: pointer;
-	font-weight: 500;
 	transition: all 200ms;
+
+	.icon {
+		display: block;
+		color: var(--theme-color-1);
+		height: 1.8rem;
+		width: 1.8rem;
+	}
 
 	&--outline {
 		color: var(--theme-color-2);
 		background: transparent;
-		border: 0.22rem solid var(--border-color);
-		border-radius: 100rem;
+		border-color: var(--border-color);
 
 		&:hover,
-		&:focus {
+		&:focus, &.selected {
 			background: var(--border-color);
 		}
 	}
 
+	&--accent {
+		background: var(--logo-color);
+		color: var(--body-bg);
+		border-color: var(--logo-color);
+
+		.icon {
+			color: currentColor;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			color: var(--logo-color);
+		}
+	}
+
 	&--dual {
-		&:first-of-type {
+		display: flex;
+
+		.btn:first-of-type {
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 			padding-right: 1em;
 		}
-		&:last-of-type {
+		.btn:last-of-type {
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
 			border-left: none;
 			padding-left: 1em;
-
 		}
 	}
-
-	.icon {
-		color: var(--theme-color-1);
-		height: 1.8rem;
-		width: 1.8rem;
-		margin-right: 0.6em;
-		position: relative;
-		top: 1px;
-	}
-}
-
-.icon {
-	cursor: pointer;
 }
