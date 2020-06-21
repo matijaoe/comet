@@ -1,18 +1,15 @@
 .header {
 	background: var(--header-bg);
+	font-size: 0.95em; /* 15.2px */
+
 	display: flex;
 	justify-content: space-between;
-	padding: 0 2.4em;
+	padding: 1.2em 2.4em;
 
 	border-bottom: $border;
 	box-shadow: 0 0.3rem 0.5rem rgba($color: black, $alpha: 0.01);
 
-	> * {
-		padding: 1.2em 0;
-	}
-
 	&__left {
-		flex: 0 0 30%;
 		display: flex;
 		align-items: center;
 	}
@@ -25,22 +22,28 @@
 		height: 2.8rem;
 		width: 2.8rem;
 		vertical-align: middle;
+		fill: currentColor;
 	}
 
 	&__logo {
 		border-radius: 50%;
-		height: 4rem;
-		width: 4rem;
+		height: 3.5rem;
+		width: 3.5rem;
 		border: 6px solid var(--logo-color);
-		margin: 0 2em;
-		margin-right: 2em;
-		
+		margin: 0 1.6em;
+		flex-shrink: 0;
+
 		cursor: pointer;
 	}
-}
 
-.form {
-	display: flex;
+	&__searchbar {
+		min-width: 12rem;
+
+		display: flex;
+		/* for the search button placement */
+		position: relative;
+		font-size: 1em;
+	}
 
 	&__search-btn {
 		background: none;
@@ -48,6 +51,16 @@
 		cursor: pointer;
 		padding: 0.6em;
 		z-index: 2;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-left: 0.2em;
+
+		&:hover .header__search-icon,
+		&:focus .header__search-icon {
+			fill: var(--theme-color-2);
+		}
 	}
 
 	&__search-icon {
@@ -55,9 +68,11 @@
 		vertical-align: middle;
 		height: 1.8rem;
 		width: 1.8rem;
+		fill: currentColor;
 	}
 
-	&__searchbar {
+	&__search-input {
+		width: 100%;
 		font-family: inherit;
 		font-size: inherit;
 		font-weight: 400;
@@ -67,8 +82,8 @@
 		border-radius: 100rem;
 		border: 2px solid transparent;
 
-		padding: 0.5em 3.25em;
-		margin-left: -2.65em;
+		padding: 0.5em 2.2em;
+		padding-right: 1em;
 
 		transition: all 200ms;
 
@@ -85,25 +100,26 @@
 }
 
 .nav {
-	flex: 2;
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+	padding-right: 2em;
+	flex: 1;
 
 	&__list {
 		display: flex;
+		align-items: center;
 	}
 
 	&__item {
-		//
+		margin: 0 0.8em;
 	}
 
 	&__link {
-		display: flex;
-		margin: 0 1.2em;
-		padding: 0.2em;
+		padding: 0.4em;
 		font-weight: 500;
 
+		/* for the pseudoelement */
 		position: relative;
 
 		&:hover,
@@ -126,11 +142,8 @@
 }
 
 .user-nav {
-	flex: 0 0 30%;
-	padding-left: 8%;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 
 	> * {
 		cursor: pointer;
@@ -138,20 +151,24 @@
 
 	&__user-photo {
 		border-radius: 50%;
+		margin: 0 1.5em;
 	}
 
 	&__icon--notifications {
 		color: var(--theme-color-1);
 		display: flex;
 		align-items: center;
-		margin-left: 0.6em;
-
-		
+		margin-left: 2em;
 	}
 
 	&__icon--dropdown {
 		color: var(--theme-color-1);
 		display: flex;
 		align-items: center;
+	}
+
+	.icon-upload {
+		width: 2.2rem;
+		height: 2.2rem;
 	}
 }

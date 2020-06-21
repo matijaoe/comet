@@ -15,22 +15,23 @@
 
     </head>
 
-    <!-- <body class="dark-mode"> -->
-
     <body>
         <div class="app-wrapper">
             <header class="header">
                 <div class="header__left">
                     <div class="header__menu">
-                        <ion-icon name="menu-outline" class="header__menu-icon icon"></ion-icon>
+                        <!-- <ion-icon name="menu-outline" class="header__menu-icon icon"></ion-icon> -->
+                        <box-icon name='menu-alt-left' class="header__menu-icon icon"></box-icon>
                     </div>
                     <div class="header__logo" id="theme-toggler"></div>
-                    <form action="" class="form">
-                        <button class="form__search-btn">
-                            <ion-icon name="search" class="form__search-icon"></ion-icon>
+                    <div class="header__searchbar">
+                        <button class="header__search-btn">
+                            <!-- <ion-icon name="search" class="header__search-icon"></ion-icon> -->
+                            <box-icon name='search' class="header__search-icon"></box-icon>
                         </button>
-                        <input type="text" name="search" id="search" class="form__searchbar" placeholder="Type in search..." autocomplete="off">
-                    </form>
+                        <input type="text" name="search" id="search" class="header__search-input" placeholder="Search..." autocomplete="off">
+                    </div>
+
                 </div>
 
                 <nav class="nav">
@@ -43,15 +44,18 @@
 
                 <div class="user-nav">
                     <button class="btn btn--outline">
-                        <ion-icon name="cloud-upload" class="icon margin-r"></ion-icon>
+                        <!-- <ion-icon name="cloud-upload" class="icon margin-r"></ion-icon> -->
+                        <box-icon name='cloud-upload' type='solid' animation='fade-up-hover' class="icon icon-upload margin-r"></box-icon>
                         <a href="#">Upload</a>
                     </button>
                     <div class="user-nav__icon--notifications">
-                        <ion-icon name="notifications" class="icon"></ion-icon>
+                        <!-- <ion-icon name="notifications" class="icon"></ion-icon> -->
+                        <box-icon name='bell' type='solid' animation='tada-hover' class="icon"></box-icon>
                     </div>
                     <img class="user-nav__user-photo" src="img/user1.jpg" alt="user" width="40" height="40">
                     <div class="user-nav__icon--dropdown">
-                        <ion-icon name="chevron-down" class="icon"></ion-icon>
+                        <!-- <ion-icon name="chevron-down" class="icon"></ion-icon> -->
+                        <box-icon name='chevron-down' type='solid' class="icon"></box-icon>
                     </div>
             </header>
 
@@ -61,7 +65,8 @@
                         <li class="aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
-                                    <ion-icon name="home" class="aside__icon icon"></ion-icon>
+                                    <!-- <ion-icon name="home" class="aside__icon icon"></ion-icon> -->
+                                    <box-icon name='home' type='solid' class="aside__icon icon"></box-icon>
                                 </div>
                                 Homepage
                             </a>
@@ -69,7 +74,7 @@
                         <li class="aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
-                                    <ion-icon name="person-circle" class="aside__icon icon"></ion-icon>
+                                    <box-icon name='user' type='solid' class="aside__icon icon"></box-icon>
                                 </div>
                                 My channel
                             </a>
@@ -77,7 +82,8 @@
                         <li class="aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
-                                    <ion-icon name="star" class="aside__icon icon"></ion-icon>
+                                    <!-- <ion-icon name="star" class="aside__icon icon"></ion-icon> -->
+                                    <box-icon name='trending-up' class="aside__icon icon"></box-icon>
                                 </div>
                                 Trending
                             </a>
@@ -85,7 +91,8 @@
                         <li class="aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
-                                    <ion-icon name="logo-youtube" class="aside__icon icon"></ion-icon>
+                                    <!-- <ion-icon name="logo-youtube" class="aside__icon icon"></ion-icon> -->
+                                    <box-icon name='videos' type='solid' class="aside__icon icon"></box-icon>
                                 </div>
                                 Subscriptions
                             </a>
@@ -93,7 +100,8 @@
                         <li class="aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
-                                    <ion-icon name="play-back-circle" class="aside__icon icon"></ion-icon>
+                                    <!-- <ion-icon name="play-back-circle" class="aside__icon icon"></ion-icon> -->
+                                    <box-icon name='history' class="aside__icon icon"></box-icon>
                                 </div>
                                 History
                             </a>
@@ -101,7 +109,8 @@
                         <li class="aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
-                                    <ion-icon name="time" class="aside__icon icon"></ion-icon>
+                                    <!-- <ion-icon name="time" class="aside__icon icon"></ion-icon> -->
+                                    <box-icon type='solid' name='time' class="aside__icon icon"></box-icon>
                                 </div>
                                 Watch later
                             </a>
@@ -109,7 +118,8 @@
                         <li class="aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
-                                    <ion-icon name="thumbs-up" class="aside__icon icon"></ion-icon>
+                                    <!-- <ion-icon name="thumbs-up" class="aside__icon icon"></ion-icon> -->
+                                    <box-icon type='solid' name='heart' class="aside__icon icon"></box-icon>
                                 </div>
                                 Liked videos
                             </a>
@@ -117,7 +127,8 @@
                         <li class="aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
-                                    <ion-icon name="play-forward" class="aside__icon icon"></ion-icon>
+                                    <!-- <ion-icon name="play-forward" class="aside__icon icon"></ion-icon> -->
+                                    <box-icon name='playlist' type='solid' class="aside__icon icon"></box-icon>
                                 </div>
                                 Playlists
                             </a>
@@ -195,7 +206,8 @@
                         <li class=" aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
-                                    <ion-icon name="musical-notes" class="aside__icon icon music"></ion-icon>
+                                    <!-- <ion-icon name="musical-notes" class="aside__icon icon music"></ion-icon> -->
+                                    <box-icon name='music' type='solid' animation='tada-hover' class="aside__icon icon music"></box-icon>
                                 </div>
                                 Music
                             </a>
@@ -203,7 +215,8 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <ion-icon name="game-controller" class="aside__icon icon gaming"></ion-icon>
+                                        <!-- <ion-icon name="game-controller" class="aside__icon icon gaming"></ion-icon> -->
+                                        <box-icon name='game' type='solid' animation='tada-hover' class="aside__icon icon gaming"></box-icon>
                                     </div>
                                     Gaming
                                 </a>
@@ -211,7 +224,8 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <ion-icon name="happy" class="aside__icon icon comedy"></ion-icon>
+                                        <!-- <ion-icon name="happy" class="aside__icon icon comedy"></ion-icon> -->
+                                        <box-icon name='happy-beaming' type='solid' animation='tada-hover' class="aside__icon icon comedy"></box-icon>
                                     </div>
                                     Comedy
                                 </a>
@@ -219,7 +233,8 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <ion-icon name="videocam" class="aside__icon icon movie"></ion-icon>
+                                        <!-- <ion-icon name="videocam" class="aside__icon icon movie"></ion-icon> -->
+                                        <box-icon name='camera-movie' type='solid' animation='tada-hover' class="aside__icon icon movie"></box-icon>
                                     </div>
                                     Movies
                                 </a>
@@ -227,7 +242,8 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <ion-icon name="fast-food" class="aside__icon icon food"></ion-icon>
+                                        <!-- <ion-icon name="fast-food" class="aside__icon icon food"></ion-icon> -->
+                                        <box-icon name='cookie' type='solid' animation='tada-hover' class="aside__icon icon food"></box-icon>
                                     </div>
                                     Food
                                 </a>
@@ -243,7 +259,8 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <ion-icon name="american-football" class="aside__icon icon sport"></ion-icon>
+                                        <!-- <ion-icon name="american-football" class="aside__icon icon sport"></ion-icon> -->
+                                        <box-icon name='tennis-ball' type='solid'  animation='tada-hover' class="aside__icon icon sport"></box-icon>
                                     </div>
                                     Sports
                                 </a>
@@ -252,6 +269,7 @@
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
                                         <ion-icon name="paw" class="aside__icon icon animal"></ion-icon>
+                                        <!-- <box-icon name='bone' type='solid' animation='tada-hover'  class="aside__icon icon animal"></box-icon> -->
                                     </div>
                                     Animal
                                 </a>
@@ -259,7 +277,16 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <ion-icon name="planet" class="aside__icon icon science"></ion-icon>
+                                        <box-icon type='solid' animation='tada-hover' name='baby-carriage' class="aside__icon icon baby"></box-icon>
+                                    </div>
+                                    Baby
+                                </a>
+                            </li>
+                            <li class="aside__item">
+                                <a href="#" class="aside__link">
+                                    <div class="aside__placeholder">
+                                        <!-- <ion-icon name="planet" class="aside__icon icon science"></ion-icon> -->
+                                        <box-icon animation='tada-hover' name='atom' class="aside__icon icon science"></box-icon>
                                     </div>
                                     Science
                                 </a>
@@ -267,7 +294,8 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <ion-icon name="briefcase" class="aside__icon icon business"></ion-icon>
+                                        <!-- <ion-icon name="briefcase" class="aside__icon icon business"></ion-icon> -->
+                                        <box-icon name='briefcase' type='solid' animation='tada-hover' class="aside__icon icon business"></box-icon>
                                     </div>
                                     Business
                                 </a>
@@ -284,18 +312,22 @@
                                 <div class="profile__hero">
                                     <div class="profile__contact">
                                         <div class="profile__contact-container">
-                                            <ion-icon name="mail" class="profile__icon profile__icon--contact icon"></ion-icon>
+                                            <!-- <ion-icon name="mail" class="profile__icon profile__icon--contact icon"></ion-icon> -->
+                                            <box-icon name='envelope' type='solid' class="profile__icon profile__icon--contact icon"></box-icon>
                                         </div>
                                         <div class="profile__contact-container">
-                                            <ion-icon name="share-social" class="profile__icon profile__icon--contact icon"></ion-icon>
+                                            <!-- <ion-icon name="share-social" class="profile__icon profile__icon--contact icon"></ion-icon> -->
+                                            <box-icon name='share-alt' type='solid' class="profile__icon profile__icon--contact icon"></box-icon>
                                         </div>
                                         <div class="profile__contact-container">
-                                            <ion-icon name="apps" class="profile__icon profile__icon--contact icon"></ion-icon>
+                                            <!-- <ion-icon name="apps" class="profile__icon profile__icon--contact icon"></ion-icon> -->
+                                            <box-icon name='dots-horizontal-rounded' class="profile__icon profile__icon--contact icon"></box-icon>
                                         </div>
                                     </div>
                                     <div class="profile__info">
                                         <div class="profile__info-item">
-                                            <ion-icon name="people" class="profile__icon icon"></ion-icon>
+                                            <!-- <ion-icon name="people" class="profile__icon icon"></ion-icon> -->
+                                            <box-icon type='solid' name='group' class="profile__icon icon"></box-icon>
                                             <span class="profile__info-data">1,408,177</span>
                                         </div>
                                         <div class="profile__info-item">
@@ -303,11 +335,13 @@
                                             <span class="profile__info-data">2,542,692</span>
                                         </div>
                                         <div class="profile__info-item">
-                                            <ion-icon name="flag" class="profile__icon icon"></ion-icon>
+                                            <!-- <ion-icon name="flag" class="profile__icon icon"></ion-icon> -->
+                                            <box-icon name='flag-alt' type='solid'  class="profile__icon icon"></box-icon>
                                             <span class="profile__info-data">May 27, 2017</span>
                                         </div>
                                         <div class="profile__info-item">
-                                            <ion-icon name="logo-youtube" class="profile__icon icon"></ion-icon>
+                                            <!-- <ion-icon name="logo-youtube" class="profile__icon icon"></ion-icon> -->
+                                            <box-icon name='video' type='solid' class="profile__icon icon"></box-icon>
                                             <span class="profile__info-data">142 videos</span>
                                         </div>
                                     </div>
@@ -334,7 +368,8 @@
                                 <header class="videos__header">
                                     <div class="videos__menu-trending">
                                         <a href="#" class="videos__link">
-                                            <ion-icon name="trending-up-outline" class="icon margin-r"></ion-icon>
+                                            <!-- <ion-icon name="trending-up-outline" class="icon margin-r"></ion-icon> -->
+                                            <box-icon name='trending-up' class="icon margin-r"></box-icon>
                                             <p>See what's trending</p>
                                         </a>
                                     </div>
@@ -344,7 +379,7 @@
                                     </div>
                                     <div class="videos__menu-button">
                                         <button class="btn btn--accent">
-                                            <ion-icon name="play" class="icon margin-r"></ion-icon>Play All
+                                            <ion-icon name="play" class="icon margin-r"></ion-icon><span>Play All</span>
                                         </button>
                                     </div>
                                 </header>
@@ -464,7 +499,8 @@
                                 </section>
                                 <div class="videos__more">
                                     <a href="#" class="videos__link">
-                                        <ion-icon name="reload-outline" class="icon margin-r"></ion-icon>
+                                        <!-- <ion-icon name="reload-outline" class="icon margin-r"></ion-icon> -->
+                                        <box-icon name='loader-alt' class="icon margin-r" animation='spin'></box-icon>
                                         <p>Load More</p>
                                     </a>
                                 </div>
@@ -474,8 +510,8 @@
                         <div class="padding-big border-top border-bottom">
                             <footer class="videos__footer">
                                 <div class="videos__footer--left">
-                                    <button class="btn btn--outline">Language: English (US)</button>
-                                    <button class="btn btn--outline">Location: Croatia</button>
+                                    <button class="btn btn--outline">Language: <img src="img/uk.png" alt="UK"></button>
+                                    <button class="btn btn--outline">Location: <img src="img/croatia.png" alt="Croatia"></button>
                                 </div>
 
                                 <nav class="videos__nav">
@@ -509,13 +545,22 @@
                         </div>
                         <div class="footer__socials">
                             <div class="footer__icon-box facebook">
-                                <ion-icon name="logo-facebook" class="icon"></ion-icon>
+                                <!-- <ion-icon name="logo-facebook" class="icon"></ion-icon> -->
+                                <box-icon type='logo' name='facebook' class="icon"></box-icon>
                             </div>
                             <div class="footer__icon-box instagram">
-                                <ion-icon name="logo-instagram" class="icon"></ion-icon>
+                                <!-- <ion-icon name="logo-instagram" class="icon"></ion-icon> -->
+                                <box-icon name='instagram-alt' type='logo' class="icon"></box-icon>
                             </div>
                             <div class="footer__icon-box twitter">
-                                <ion-icon name="logo-twitter" class="icon"></ion-icon>
+                                <!-- <ion-icon name="logo-twitter" class="icon"></ion-icon> -->
+                                <box-icon name='twitter' type='logo' class="icon"></box-icon>
+                            </div>
+                            <div class="footer__icon-box reddit">
+                                <box-icon name='reddit' type='logo' class="icon"></box-icon>
+                            </div>
+                            <div class="footer__icon-box github">
+                                <box-icon name='github' type='logo' class="icon"></box-icon>
                             </div>
                         </div>
                         <div class="footer__terms">
@@ -531,6 +576,7 @@
 
 
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+        <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
         <script src="js/app.js"></script>
     </body>
 

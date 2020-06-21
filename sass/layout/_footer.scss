@@ -3,10 +3,6 @@
 	justify-content: space-between;
 	align-items: center;
 	font-size: 0.9em;
-
-	&__copyright {
-	}
-
 	&__socials {
 		display: flex;
 		justify-content: center;
@@ -15,36 +11,54 @@
 	&__icon-box {
 		border-radius: 50%;
 		border: $border;
+		border-color: transparent;
 		display: grid;
 		place-content: center;
-		height: 3.6em;
-		width: 3.6em;
-		margin: 0 0.5em;
+		height: 3.2em;
+		width: 3.2em;
+		margin: 0 0.3em;
 		box-shadow: 0 0 0rem 0rem rgba($color: #3b5998, $alpha: 0.5);
 
-		transition: border-color 500ms, box-shadow 1000ms;
+		transition: all 250ms;
+
+		overflow: hidden;
+		cursor: pointer;
 	}
 
-	.facebook:hover {
+	.facebook:hover,
+	.facebook:focus {
 		color: #3b5998;
 		border-color: currentColor;
-		box-shadow: 0 0 5rem 0.1rem rgba($color: #1b5998, $alpha: 0.6);
+		// box-shadow: 0 0 5rem 0.1rem rgba($color: #1b5998, $alpha: 0.6);
 	}
-	.instagram:hover {
+	.instagram:hover,
+	.instagram:focus {
 		color: #c11584;
 		border-color: currentColor;
-		box-shadow: 0 0 5rem 0.1rem rgba($color: #c13584, $alpha: 0.6);
+		// box-shadow: 0 0 5rem 0.1rem rgba($color: #c13584, $alpha: 0.6);
 	}
-	.twitter:hover {
+	.twitter:hover,
+	.twitter:focus {
 		color: #1da1f2;
 		border-color: currentColor;
-		box-shadow: 0 0 5rem 0.1rem rgba($color: #1da1f2, $alpha: 0.6);
+		// box-shadow: 0 0 5rem 0.1rem rgba($color: #1da1f2, $alpha: 0.6);
+	}
+	.reddit:hover,
+	.reddit:focus {
+		color: #ff4500;
+		border-color: currentColor;
+		// box-shadow: 0 0 5rem 0.1rem rgba($color: #ff4500, $alpha: 0.6);
+	}
+	.github:hover,
+	.github:focus {
+		color: #6e5494;
+		border-color: currentColor;
+		// box-shadow: 0 0 5rem 0.1rem rgba($color: #6e5494, $alpha: 0.6);
 	}
 
 	.icon {
 		height: 1.6em;
 		width: 1.6em;
-		padding: 1em;
 		transition: all 500ms;
 	}
 

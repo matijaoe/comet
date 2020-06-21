@@ -19,6 +19,27 @@
 		flex: 1;
 		display: flex;
 		justify-content: flex-end;
+		/* for the hover animation */
+		overflow: hidden;
+
+		span {
+			transition: all 250ms;
+		}
+
+		.btn:hover,
+		.btn:focus {
+			background: var(--logo-color);
+			color: var(--body-bg);
+
+			.icon {
+				transform: translateX(158%) scale(1.25);
+			}
+
+			span {
+				// transform: translateX(90px);
+				opacity: 0;
+			}
+		}
 	}
 
 	&__link {
@@ -26,7 +47,8 @@
 		align-items: center;
 		transition: all 200ms;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: var(--theme-color-2);
 
 			.icon {
@@ -47,12 +69,35 @@
 		align-items: center;
 		padding: 0 2em;
 		margin: 3.5em 0 1.5em;
+
+		.icon {
+			// animation: spin;
+		}
 	}
 
 	&__footer {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+
+		.btn--outline {
+			color: var(--theme-color-1);
+
+			&:hover,
+			&:focus {
+				color: var(--theme-color-2);
+			}
+
+			&:hover img,
+			&:focus img {
+				transform: scale(1.25) translateX(0.2em);
+			}
+
+			img {
+				margin-left: 0.5em;
+				width: 1.5em;
+				transition: all 250ms;
+			}
+		}
 
 		&--left {
 			flex: 1;
@@ -77,10 +122,10 @@
 	}
 
 	&__nav {
-		flex: 2;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
+		margin-left: auto;
 		font-size: 0.9em;
 	}
 
@@ -89,7 +134,7 @@
 		align-items: center;
 		justify-content: center;
 		color: var(--theme-color-3);
-		margin-bottom: 2em;
+		margin-bottom: 1.2em;
 	}
 
 	&__nav--secondary {
@@ -99,15 +144,22 @@
 	}
 
 	&__nav-item {
-		margin: 0 1em;
+		margin: 0 0.6em;
 	}
 	&__nav-link {
-		padding-bottom: 0.5em;
+		display: block;
+		transition: all 250ms;
+	}
 
-		&:hover {
-			// color: var(--theme-color-2);
-			text-decoration: underline;
-		}
+	&__nav-item:nth-child(odd):hover &__nav-link,
+	&__nav-item:nth-child(odd):focus &__nav-link {
+		transform: rotate(-5deg) scale(1.1);
+		color: var(--logo-color);
+	}
+	&__nav-item:nth-child(even):hover &__nav-link,
+	&__nav-item:nth-child(even):focus &__nav-link {
+		transform: rotate(5deg) scale(1.1);
+		color: var(--logo-color);
 	}
 }
 
