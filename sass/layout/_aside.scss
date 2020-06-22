@@ -5,7 +5,7 @@
 	color: var(--theme-color-2);
 	overflow: auto;
 	@include scrollbar;
-	font-weight: 400;
+	font-weight: 500;
 
 	@include respond(xl) {
 		flex-basis: 23.5rem;

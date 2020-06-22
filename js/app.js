@@ -14,7 +14,16 @@ allVideos.forEach(v => {
 const toggleButton = document.getElementById('theme-toggler');
 
 toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('light-mode')) {
+        document.body.classList.remove('light-mode');
+        document.body.classList.toggle('dark-mode');
+    } else if (document.body.classList.contains('dark-mode')) {
+        document.body.classList.remove('dark-mode');
+        document.body.classList.toggle('amoled-mode');
+    } else if (document.body.classList.contains('amoled-mode')) {
+        document.body.classList.remove('amoled-mode');
+        document.body.classList.toggle('light-mode');
+    }
 });
 
 

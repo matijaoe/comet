@@ -1,16 +1,15 @@
 .profile {
-	background: var(--header-bg);
+	background: var(--card-bg);
 	box-shadow: 0.1rem 0.3rem 0.6rem rgba($color: black, $alpha: 0.04);
 
-	border-radius: 0.5rem;
+	border-radius: 0.7rem;
 	overflow: hidden;
-
-	font-weight: 500;
 
 	&__hero {
 		height: 28rem;
 		background: url(../img/adventure-calm-clouds-dawn-414171.jpg) no-repeat;
 		background-size: cover;
+		background-clip: border-box;
 		background-position: center;
 
 		display: flex;
@@ -101,6 +100,8 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 0 1.8em;
+
+		font-weight: 500;
 	}
 	&__user {
 		display: flex;

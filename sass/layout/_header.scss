@@ -1,6 +1,7 @@
 .header {
 	background: var(--header-bg);
 	font-size: 0.95em; /* 15.2px */
+	font-weight: 500;
 
 	display: flex;
 	justify-content: space-between;
@@ -34,7 +35,6 @@
 		flex-shrink: 0;
 
 		cursor: pointer;
-
 	}
 
 	&__searchbar {
@@ -70,6 +70,8 @@
 		height: 1.8rem;
 		width: 1.8rem;
 		fill: currentColor;
+		position: relative;
+		top: 1px;
 	}
 
 	&__search-input {
@@ -118,7 +120,6 @@
 
 	&__link {
 		padding: 0.4em;
-		font-weight: 500;
 
 		/* for the pseudoelement */
 		position: relative;
@@ -134,7 +135,7 @@
 			width: 0.6rem;
 			height: 0.6rem;
 			border-radius: 50%;
-			background: var(--accent);
+			background: var(--logo-color);
 			position: absolute;
 			top: 0.4rem;
 			right: -0.6rem;
@@ -180,7 +181,7 @@
 
 	@include respond(xl) {
 		.btn {
-			padding: .75em;
+			padding: 0.75em;
 		}
 		.btn span {
 			display: none;

@@ -1,13 +1,14 @@
 $border: 3px solid var(--border-color);
 
 :root {
-	--body-font: 'Work Sans', "Manrope", sans-serif;
+	--body-font: "DM Sans", "Work Sans", sans-serif;
 
 	// LIGHT MODE
 	--body-bg: #f2f2f2;
 	--theme-bg: #fafafa;
 	--border-color: #efefef;
 	--header-bg: #fff;
+	--card-bg: transparent;
 
 	--theme-color-1: #b3b3b3;
 	--theme-color-1-opaque: hsla(0, 0%, 70%, 0.3);
@@ -40,10 +41,23 @@ $border: 3px solid var(--border-color);
 .dark-mode {
 	--body-bg: #1e222b;
 	--theme-bg: #212835;
-	--border-color: #393f50;
-	--header-bg: #323a4b;
+	--border-color: #444b5f;
+	--header-bg: #212835;
+	--card-bg: #2f3646;
 
 	--theme-color-1: #fefffd;
-	--theme-color-2: #dddee0;
-	--theme-color-3: #dddee0;
+	--theme-color-2: #d1d1d1;
+	--theme-color-3: #f5f5f5;
+}
+
+.amoled-mode {
+	--body-bg: #0f0f0f;
+	--theme-bg: #000;
+	--border-color: #222;
+	--header-bg: #000;
+	--card-bg: hsl(0, 0%, 12%);
+
+	--theme-color-1: #fefffd;
+	--theme-color-2: #d1d1d1;
+	--theme-color-3: #f5f5f5;
 }

@@ -35,9 +35,9 @@
 	}
 
 	&--accent {
-		background: var(--logo-color);
+		background: var(--accent);
 		color: var(--body-bg);
-		border-color: var(--logo-color);
+		border-color: var(--accent);
 
 		.icon {
 			color: currentColor;
@@ -46,7 +46,7 @@
 		&:hover,
 		&:focus {
 			background-color: transparent;
-			color: var(--logo-color);
+			color: var(--accent);
 		}
 	}
 

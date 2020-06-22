@@ -18,6 +18,7 @@
 		width: 3.2em;
 		margin: 0 0.3em;
 		box-shadow: 0 0 0rem 0rem rgba($color: #3b5998, $alpha: 0.5);
+		color: currentColor;
 
 		transition: all 250ms;
 
@@ -59,6 +60,7 @@
 	.icon {
 		height: 1.6em;
 		width: 1.6em;
+		fill: currentColor;
 	}
 
 	&__link {

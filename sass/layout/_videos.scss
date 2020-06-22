@@ -62,7 +62,7 @@
 
 		.btn:hover,
 		.btn:focus {
-			background: var(--logo-color);
+			background: var(--accent);
 			color: var(--body-bg);
 
 			.icon {
@@ -225,20 +225,20 @@
 	&__nav-item:nth-child(odd):hover &__nav-link,
 	&__nav-item:nth-child(odd):focus &__nav-link {
 		transform: rotate(-5deg) scale(1.1);
-		color: var(--logo-color);
+		color: var(--accent);
 	}
 	&__nav-item:nth-child(even):hover &__nav-link,
 	&__nav-item:nth-child(even):focus &__nav-link {
 		transform: rotate(5deg) scale(1.1);
-		color: var(--logo-color);
+		color: var(--accent);
 	}
 }
 
 .video {
-	background: var(--header-bg);
-	border-radius: 0.5rem;
+	background: var(--card-bg);
+	border-radius: 0.7rem;
 	overflow: hidden;
-	box-shadow: 0.1rem 0.3rem 0.6rem rgba($color: black, $alpha: 0.04);
+	box-shadow: 0.2rem 0.3rem 0.6rem 0.3rem rgba($color: black, $alpha: 0.04);
 
 	cursor: pointer;
 
@@ -258,7 +258,7 @@
 			color: white;
 			z-index: 10;
 			text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-			// transform: translateY(-1200%);
+			// transform: translateY(-1300%);
 		}
 
 		.video__info {

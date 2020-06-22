@@ -55,11 +55,12 @@ box-icon[name="history"] {
   overflow: auto; }
 
 :root {
-  --body-font: 'Work Sans', "Manrope", sans-serif;
+  --body-font: "DM Sans", "Work Sans", sans-serif;
   --body-bg: #f2f2f2;
   --theme-bg: #fafafa;
   --border-color: #efefef;
   --header-bg: #fff;
+  --card-bg: transparent;
   --theme-color-1: #b3b3b3;
   --theme-color-1-opaque: hsla(0, 0%, 70%, 0.3);
   --theme-color-2: #808080;
@@ -86,11 +87,22 @@ box-icon[name="history"] {
 .dark-mode {
   --body-bg: #1e222b;
   --theme-bg: #212835;
-  --border-color: #393f50;
-  --header-bg: #323a4b;
+  --border-color: #444b5f;
+  --header-bg: #212835;
+  --card-bg: #2f3646;
   --theme-color-1: #fefffd;
-  --theme-color-2: #dddee0;
-  --theme-color-3: #dddee0; }
+  --theme-color-2: #d1d1d1;
+  --theme-color-3: #f5f5f5; }
+
+.amoled-mode {
+  --body-bg: #0f0f0f;
+  --theme-bg: #000;
+  --border-color: #222;
+  --header-bg: #000;
+  --card-bg: hsl(0, 0%, 12%);
+  --theme-color-1: #fefffd;
+  --theme-color-2: #d1d1d1;
+  --theme-color-3: #f5f5f5; }
 
 /* 1040px */
 /* 900px */
@@ -135,14 +147,14 @@ box-icon[name="history"] {
     .btn--outline:hover, .btn--outline:focus, .btn--outline.selected {
       background: var(--border-color); }
   .btn--accent {
-    background: var(--logo-color);
+    background: var(--accent);
     color: var(--body-bg);
-    border-color: var(--logo-color); }
+    border-color: var(--accent); }
     .btn--accent .icon {
       color: currentColor; }
     .btn--accent:hover, .btn--accent:focus {
       background-color: transparent;
-      color: var(--logo-color); }
+      color: var(--accent); }
   .btn--dual {
     display: flex; }
     .btn--dual .btn:first-of-type {
@@ -156,15 +168,15 @@ box-icon[name="history"] {
       padding-left: 1em; }
 
 .profile {
-  background: var(--header-bg);
+  background: var(--card-bg);
   box-shadow: 0.1rem 0.3rem 0.6rem rgba(0, 0, 0, 0.04);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  font-weight: 500; }
+  border-radius: 0.7rem;
+  overflow: hidden; }
   .profile__hero {
     height: 28rem;
     background: url(../img/adventure-calm-clouds-dawn-414171.jpg) no-repeat;
     background-size: cover;
+    background-clip: border-box;
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -225,7 +237,8 @@ box-icon[name="history"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1.8em; }
+    padding: 0 1.8em;
+    font-weight: 500; }
   .profile__user {
     display: flex;
     align-items: center; }
@@ -308,7 +321,7 @@ box-icon[name="history"] {
         left: 1px; } }
     .videos__play-button .btn:hover,
     .videos__play-button .btn:focus {
-      background: var(--logo-color);
+      background: var(--accent);
       color: var(--body-bg); }
       .videos__play-button .btn:hover .icon,
       .videos__play-button .btn:focus .icon {
@@ -402,17 +415,17 @@ box-icon[name="history"] {
   .videos__nav-item:nth-child(odd):hover .videos__nav-link,
   .videos__nav-item:nth-child(odd):focus .videos__nav-link {
     transform: rotate(-5deg) scale(1.1);
-    color: var(--logo-color); }
+    color: var(--accent); }
   .videos__nav-item:nth-child(even):hover .videos__nav-link,
   .videos__nav-item:nth-child(even):focus .videos__nav-link {
     transform: rotate(5deg) scale(1.1);
-    color: var(--logo-color); }
+    color: var(--accent); }
 
 .video {
-  background: var(--header-bg);
-  border-radius: 0.5rem;
+  background: var(--card-bg);
+  border-radius: 0.7rem;
   overflow: hidden;
-  box-shadow: 0.1rem 0.3rem 0.6rem rgba(0, 0, 0, 0.04);
+  box-shadow: 0.2rem 0.3rem 0.6rem 0.3rem rgba(0, 0, 0, 0.04);
   cursor: pointer;
   display: flex;
   flex-direction: column; }
@@ -470,7 +483,7 @@ box-icon[name="history"] {
   color: var(--theme-color-2);
   overflow: auto;
   scrollbar-width: thin;
-  font-weight: 400;
+  font-weight: 500;
   /* 1050px / 16px = 65em */
   /* 900px */
   transition: all 400ms;
@@ -571,6 +584,7 @@ box-icon[name="history"] {
   background: var(--header-bg);
   font-size: 0.95em;
   /* 15.2px */
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
   padding: 1.2em 2.4em;
@@ -619,7 +633,9 @@ box-icon[name="history"] {
     vertical-align: middle;
     height: 1.8rem;
     width: 1.8rem;
-    fill: currentColor; }
+    fill: currentColor;
+    position: relative;
+    top: 1px; }
   .header__search-input {
     width: 100%;
     font-family: inherit;
@@ -650,7 +666,6 @@ box-icon[name="history"] {
     margin: 0 0.8em; }
   .nav__link {
     padding: 0.4em;
-    font-weight: 500;
     /* for the pseudoelement */
     position: relative; }
     .nav__link:hover, .nav__link:focus, .nav__link.active {
@@ -660,7 +675,7 @@ box-icon[name="history"] {
       width: 0.6rem;
       height: 0.6rem;
       border-radius: 50%;
-      background: var(--accent);
+      background: var(--logo-color);
       position: absolute;
       top: 0.4rem;
       right: -0.6rem; }
@@ -691,7 +706,7 @@ box-icon[name="history"] {
     height: 2.2rem; }
   @media only screen and (max-width: 65em) {
     .user-nav .btn {
-      padding: .75em; }
+      padding: 0.75em; }
     .user-nav .btn span {
       display: none; }
     .user-nav .icon {
@@ -720,6 +735,7 @@ box-icon[name="history"] {
     width: 3.2em;
     margin: 0 0.3em;
     box-shadow: 0 0 0rem 0rem rgba(59, 89, 152, 0.5);
+    color: currentColor;
     transition: all 250ms;
     overflow: hidden;
     cursor: pointer; }
@@ -745,6 +761,7 @@ box-icon[name="history"] {
     border-color: currentColor; }
   .footer .icon {
     height: 1.6em;
-    width: 1.6em; }
+    width: 1.6em;
+    fill: currentColor; }
   .footer__link:hover {
     text-decoration: underline; }
