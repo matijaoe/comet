@@ -18,3 +18,11 @@ toggleButton.addEventListener('click', () => {
 });
 
 
+const menuButton = document.getElementById('hamburger-menu');
+const asideNav = document.getElementById('aside-nav');
+
+menuButton.addEventListener('click', () => {
+    asideNav.classList.toggle('hide');
+});
+
+

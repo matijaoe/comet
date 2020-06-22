@@ -19,11 +19,11 @@
         <div class="app-wrapper">
             <header class="header">
                 <div class="header__left">
-                    <div class="header__menu">
+                    <div class="header__menu" id="hamburger-menu">
                         <!-- <ion-icon name="menu-outline" class="header__menu-icon icon"></ion-icon> -->
                         <box-icon name='menu-alt-left' class="header__menu-icon icon"></box-icon>
                     </div>
-                    <div class="header__logo" id="theme-toggler"></div>
+                    <div class="header__logo" id="theme-toggler" title="ide gas"></div>
                     <div class="header__searchbar">
                         <button class="header__search-btn">
                             <!-- <ion-icon name="search" class="header__search-icon"></ion-icon> -->
@@ -43,11 +43,14 @@
                 </nav>
 
                 <div class="user-nav">
-                    <button class="btn btn--outline">
-                        <!-- <ion-icon name="cloud-upload" class="icon margin-r"></ion-icon> -->
-                        <box-icon name='cloud-upload' type='solid' animation='fade-up-hover' class="icon icon-upload margin-r"></box-icon>
-                        <a href="#">Upload</a>
-                    </button>
+                    <div class="user-nav__upload">
+                        <button class="btn btn--outline">
+                            <!-- <ion-icon name="cloud-upload" class="icon margin-r"></ion-icon> -->
+                            <box-icon name='cloud-upload' type='solid' animation='fade-up-hover' class="icon icon-upload margin-r"></box-icon>
+                            <span>Upload</span>
+                        </button>
+                    </div>
+
                     <div class="user-nav__icon--notifications">
                         <!-- <ion-icon name="notifications" class="icon"></ion-icon> -->
                         <box-icon name='bell' type='solid' animation='tada-hover' class="icon"></box-icon>
@@ -60,7 +63,7 @@
             </header>
 
             <div class="main-wrapper">
-                <aside class="aside">
+                <aside class="aside hide" id="aside-nav">
                     <ul class="aside__list">
                         <li class="aside__item">
                             <a href="#" class="aside__link">
@@ -242,8 +245,8 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <!-- <ion-icon name="fast-food" class="aside__icon icon food"></ion-icon> -->
-                                        <box-icon name='cookie' type='solid' animation='tada-hover' class="aside__icon icon food"></box-icon>
+                                        <ion-icon name="fast-food" class="aside__icon icon food"></ion-icon>
+                                        <!-- <box-icon name='cookie' type='solid' animation='tada-hover' class="aside__icon icon food"></box-icon> -->
                                     </div>
                                     Food
                                 </a>
@@ -259,8 +262,8 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <!-- <ion-icon name="american-football" class="aside__icon icon sport"></ion-icon> -->
-                                        <box-icon name='tennis-ball' type='solid'  animation='tada-hover' class="aside__icon icon sport"></box-icon>
+                                        <ion-icon name="american-football" class="aside__icon icon sport"></ion-icon>
+                                        <!-- <box-icon name='tennis-ball' type='solid' animation='tada-hover' class="aside__icon icon sport"></box-icon> -->
                                     </div>
                                     Sports
                                 </a>
@@ -328,21 +331,26 @@
                                         <div class="profile__info-item">
                                             <!-- <ion-icon name="people" class="profile__icon icon"></ion-icon> -->
                                             <box-icon type='solid' name='group' class="profile__icon icon"></box-icon>
-                                            <span class="profile__info-data">1,408,177</span>
+                                            <span class="profile__info-data--full">1,408,177</span>
+                                            <span class="profile__info-data--short">1.4M</span>
+                                            <span></span>
                                         </div>
                                         <div class="profile__info-item">
                                             <ion-icon name="eye" class="profile__icon icon"></ion-icon>
-                                            <span class="profile__info-data">2,542,692</span>
+                                            <span class="profile__info-data--full">2,542,692</span>
+                                            <span class="profile__info-data--short">2.5M</span>
                                         </div>
                                         <div class="profile__info-item">
                                             <!-- <ion-icon name="flag" class="profile__icon icon"></ion-icon> -->
-                                            <box-icon name='flag-alt' type='solid'  class="profile__icon icon"></box-icon>
-                                            <span class="profile__info-data">May 27, 2017</span>
+                                            <box-icon name='flag-alt' type='solid' class="profile__icon icon"></box-icon>
+                                            <span class="profile__info-data--full">May 27, 2017</span>
+                                            <span class="profile__info-data--short">May '17</span>
                                         </div>
                                         <div class="profile__info-item">
                                             <!-- <ion-icon name="logo-youtube" class="profile__icon icon"></ion-icon> -->
                                             <box-icon name='video' type='solid' class="profile__icon icon"></box-icon>
-                                            <span class="profile__info-data">142 videos</span>
+                                            <span class="profile__info-data--full">142 videos</span>
+                                            <span class="profile__info-data--short">142</span>
                                         </div>
                                     </div>
                                 </div>
@@ -377,9 +385,10 @@
                                         <button class="btn btn--outline selected">Date Added</button>
                                         <button class="btn btn--outline">Most Popular</button>
                                     </div>
-                                    <div class="videos__menu-button">
+                                    <div class="videos__play-button">
                                         <button class="btn btn--accent">
-                                            <ion-icon name="play" class="icon margin-r"></ion-icon><span>Play All</span>
+                                            <ion-icon name="play" class="icon margin-r"></ion-icon>
+                                            <span>Play</span>
                                         </button>
                                     </div>
                                 </header>
@@ -394,7 +403,7 @@
                                             <div class="video__info">
                                                 <img class="video__user-photo" src="img/user11.jpg" alt="user" width="32" height="32">
                                                 <p class="video__user-name">Dan Brumm</p>
-                                                <p class="video__views">16.9K views</p>
+                                                <p class="video__views">16.9K <span class="views">views</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -408,7 +417,7 @@
                                             <div class="video__info">
                                                 <img class="video__user-photo" src="img/user16.jpg" alt="user" width="32" height="32">
                                                 <p class="video__user-name">Matthias Tungst</p>
-                                                <p class="video__views">99k views</p>
+                                                <p class="video__views">99k <span class="views">views</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -422,7 +431,7 @@
                                             <div class="video__info">
                                                 <img class="video__user-photo" src="img/user12.jpg" alt="user" width="32" height="32">
                                                 <p class="video__user-name">Jason Barilla</p>
-                                                <p class="video__views">854k views</p>
+                                                <p class="video__views">854k <span class="views">views</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -436,7 +445,7 @@
                                             <div class="video__info">
                                                 <img class="video__user-photo" src="img/user17.jpg" alt="user" width="32" height="32">
                                                 <p class="video__user-name">Gabe Newport</p>
-                                                <p class="video__views">1.8M views</p>
+                                                <p class="video__views">1.8M <span class="views">views</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -450,7 +459,7 @@
                                             <div class="video__info">
                                                 <img class="video__user-photo" src="img/user14.jpg" alt="user" width="32" height="32">
                                                 <p class="video__user-name">Fred Dier</p>
-                                                <p class="video__views">2.3M views</p>
+                                                <p class="video__views">2.3M <span class="views">views</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -464,7 +473,7 @@
                                             <div class="video__info">
                                                 <img class="video__user-photo" src="img/user15.jpg" alt="user" width="32" height="32">
                                                 <p class="video__user-name">Berta Schnitzl</p>
-                                                <p class="video__views">434.5K views</p>
+                                                <p class="video__views">434.5K <span class="views">views</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -478,7 +487,7 @@
                                             <div class="video__info">
                                                 <img class="video__user-photo" src="img/user13.jpg" alt="user" width="32" height="32">
                                                 <p class="video__user-name">Maddie Hover</p>
-                                                <p class="video__views">167.2K views</p>
+                                                <p class="video__views">167.2K <span class="views">views</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -492,7 +501,7 @@
                                             <div class="video__info">
                                                 <img class="video__user-photo" src="img/zeljko.jpg" alt="user" width="32" height="32">
                                                 <p class="video__user-name">Željko Stojanović</p>
-                                                <p class="video__views">13 views</p>
+                                                <p class="video__views">13 <span class="views">views</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -509,31 +518,41 @@
 
                         <div class="padding-big border-top border-bottom">
                             <footer class="videos__footer">
-                                <div class="videos__footer--left">
-                                    <button class="btn btn--outline">Language: <img src="img/uk.png" alt="UK"></button>
-                                    <button class="btn btn--outline">Location: <img src="img/croatia.png" alt="Croatia"></button>
+                                <div class="videos__footer-row">
+                                    <button class="btn btn--outline">
+                                        <span>Language: </span>
+                                        <img src="img/uk.png" alt="UK">
+                                    </button>
+                                    <nav class="videos__nav">
+                                        <ul class="videos__nav-list primary">
+                                            <li class="videos__nav-item"><a href="#" class="videos__nav-link">About</a></li>
+                                            <li class="videos__nav-item"><a href="#" class="videos__nav-link">Press</a></li>
+                                            <li class="videos__nav-item"><a href="#" class="videos__nav-link">Copyright</a></li>
+                                            <li class="videos__nav-item"><a href="#" class="videos__nav-link">Creators</a></li>
+                                            <li class="videos__nav-item"><a href="#" class="videos__nav-link">Advertise</a></li>
+                                            <li class="videos__nav-item"><a href="#" class="videos__nav-link">Developers</a></li>
+                                        </ul>
+                                    </nav>
+                                    <button class="btn btn--outline"><span>Report</span>
+                                        <box-icon name='report' type="solid" class="icon"></box-icon>
+                                    </button>
                                 </div>
-
-                                <nav class="videos__nav">
-                                    <ul class="videos__nav--main">
-                                        <li class="videos__nav-item"><a href="#" class="videos__nav-link">About</a></li>
-                                        <li class="videos__nav-item"><a href="#" class="videos__nav-link">Press</a></li>
-                                        <li class="videos__nav-item"><a href="#" class="videos__nav-link">Copyright</a></li>
-                                        <li class="videos__nav-item"><a href="#" class="videos__nav-link">Creators</a></li>
-                                        <li class="videos__nav-item"><a href="#" class="videos__nav-link">Advertise</a></li>
-                                        <li class="videos__nav-item"><a href="#" class="videos__nav-link">Developers</a></li>
-                                    </ul>
-                                    <ul class="videos__nav--secondary">
-                                        <li class="videos__nav-item"><a href="#" class="videos__nav-link">Terms</a></li>
-                                        <li class="videos__nav-item"><a href="#" class="videos__nav-link">Privacy</a></li>
-                                        <li class="videos__nav-item"><a href="#" class="videos__nav-link">Policy &amp; Safety</a></li>
-                                        <li class="videos__nav-item"><a href="#" class="videos__nav-link">Feedback</a></li>
-
-                                    </ul>
-                                </nav>
-                                <div class="videos__footer--right">
-                                    <button class="btn btn--outline">History</button>
-                                    <button class="btn btn--outline">Help</button>
+                                <div class="videos__footer-row">
+                                    <button class="btn btn--outline">
+                                        <span>Location: </span> <img src="img/croatia.png" alt="Croatia">
+                                    </button>
+                                    <nav class="videos__nav">
+                                        <ul class="videos__nav-list">
+                                            <li class="videos__nav-item"><a href="#" class="videos__nav-link">Terms</a></li>
+                                            <li class="videos__nav-item"><a href="#" class="videos__nav-link">Privacy</a></li>
+                                            <li class="videos__nav-item"><a href="#" class="videos__nav-link">Policy &amp; Safety</a></li>
+                                            <li class="videos__nav-item"><a href="#" class="videos__nav-link">Feedback</a></li>
+                                        </ul>
+                                    </nav>
+                                    <button class="btn btn--outline">
+                                        <span>Help</span>
+                                        <box-icon type='solid' name='help-circle' class="icon"></box-icon>
+                                    </button>
                                 </div>
                             </footer>
                         </div>
@@ -545,15 +564,12 @@
                         </div>
                         <div class="footer__socials">
                             <div class="footer__icon-box facebook">
-                                <!-- <ion-icon name="logo-facebook" class="icon"></ion-icon> -->
                                 <box-icon type='logo' name='facebook' class="icon"></box-icon>
                             </div>
                             <div class="footer__icon-box instagram">
-                                <!-- <ion-icon name="logo-instagram" class="icon"></ion-icon> -->
                                 <box-icon name='instagram-alt' type='logo' class="icon"></box-icon>
                             </div>
                             <div class="footer__icon-box twitter">
-                                <!-- <ion-icon name="logo-twitter" class="icon"></ion-icon> -->
                                 <box-icon name='twitter' type='logo' class="icon"></box-icon>
                             </div>
                             <div class="footer__icon-box reddit">
@@ -564,7 +580,6 @@
                             </div>
                         </div>
                         <div class="footer__terms">
-                            <a href="#" class="footer__link">Privacy Policy</a>
                             <a href="#" class="footer__link">Terms of use</a>
                         </div>
                     </footer>

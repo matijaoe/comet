@@ -34,6 +34,7 @@
 		flex-shrink: 0;
 
 		cursor: pointer;
+
 	}
 
 	&__searchbar {
@@ -149,6 +150,11 @@
 		cursor: pointer;
 	}
 
+	&__upload {
+		display: flex;
+		align-items: center;
+	}
+
 	&__user-photo {
 		border-radius: 50%;
 		margin: 0 1.5em;
@@ -170,5 +176,27 @@
 	.icon-upload {
 		width: 2.2rem;
 		height: 2.2rem;
+	}
+
+	@include respond(xl) {
+		.btn {
+			padding: .75em;
+		}
+		.btn span {
+			display: none;
+		}
+
+		.icon {
+			margin: 0;
+		}
+
+		.icon-upload {
+			width: 2.4rem;
+			height: 2.4rem;
+		}
+
+		&__icon--notifications {
+			margin-left: 1em;
+		}
 	}
 }

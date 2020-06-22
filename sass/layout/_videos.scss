@@ -13,17 +13,51 @@
 	&__menu-trending {
 		display: flex;
 		flex: 1;
+
+		@include respond(lg) {
+			p {
+				display: none;
+			}
+		}
 	}
 
-	&__menu-button {
+	&__menu-buttons {
+		padding: 0 1em;
+		.btn--outline {
+			color: var(--theme-color-1);
+		}
+
+		.selected {
+			color: var(--theme-color-2);
+		}
+	}
+
+	&__play-button {
 		flex: 1;
 		display: flex;
 		justify-content: flex-end;
+
 		/* for the hover animation */
 		overflow: hidden;
 
 		span {
 			transition: all 250ms;
+		}
+
+		@include respond(lg) {
+			.btn {
+				padding: 1em;
+			}
+
+			span {
+				display: none;
+			}
+
+			.icon {
+				margin: 0;
+				position: relative;
+				left: 1px;
+			}
 		}
 
 		.btn:hover,
@@ -32,7 +66,11 @@
 			color: var(--body-bg);
 
 			.icon {
-				transform: translateX(158%) scale(1.25);
+				transform: translateX(104%) scale(1.25);
+
+				@include respond(lg) {
+					transform: translateX(0) scale(1.25);
+				}
 			}
 
 			span {
@@ -59,8 +97,12 @@
 
 	&__grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		gap: 1.5em;
+
+		@include respond(sm) {
+			grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+		}
 	}
 
 	&__more {
@@ -77,7 +119,18 @@
 
 	&__footer {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+
+		&-row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			align-items: stretch;
+
+			&:first-child {
+				margin-bottom: 0.5em;
+			}
+		}
 
 		.btn--outline {
 			color: var(--theme-color-1);
@@ -89,59 +142,77 @@
 
 			&:hover img,
 			&:focus img {
-				transform: scale(1.25) translateX(0.2em);
+				transform: scale(1.15) translateX(0.1em);
 			}
 
 			img {
-				margin-left: 0.5em;
 				width: 1.5em;
+				height: 1.5em;
 				transition: all 250ms;
+				margin-left: 0.5em;
 			}
-		}
 
-		&--left {
-			flex: 1;
-			justify-content: space-between;
-
-			button:first-child {
-				margin-bottom: 0.8em;
+			.icon {
+				display: none;
+				width: 1.4em;
+				height: 1.4em;
 			}
-		}
 
-		&--right {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-end;
-			justify-content: space-between;
+			@include respond(xl) {
+				padding: 0.75em;
+				/* disable strechinh buttons with flag images */
+				align-self: center;
 
-			button:first-child {
-				margin-bottom: 0.8em;
+				span {
+					display: none;
+				}
+
+				.icon {
+					display: block;
+				}
+
+				img {
+					width: 1.7em;
+					height: 1.7em;
+					margin-left: 0;
+				}
+
+				&:hover img,
+				&:focus img {
+					transform: scale(1);
+				}
 			}
 		}
 	}
 
 	&__nav {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		margin-left: auto;
+		align-items: center;
 		font-size: 0.9em;
+		padding: 0 1em;
 	}
 
-	&__nav--main {
+	&__nav-list {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: var(--theme-color-3);
-		margin-bottom: 1.2em;
+
+		&.primary {
+			color: var(--theme-color-3);
+		}
 	}
 
-	&__nav--secondary {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+	// &__nav--main {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	color: var(--theme-color-3);
+	// 	margin-bottom: 1.2em;
+	// }
+
+	// &__nav--secondary {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// }
 
 	&__nav-item {
 		margin: 0 0.6em;
@@ -229,6 +300,12 @@
 
 		transition: transform 600ms;
 		transform-origin: top;
+
+		@include respond(sm) {
+			.views {
+				display: none;
+			}
+		}
 	}
 
 	&__user-photo {

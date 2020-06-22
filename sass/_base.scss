@@ -37,9 +37,15 @@ ul {
 
 .icon {
 	cursor: pointer;
-	width: 2.2rem;
-	height: 2.2rem;
+	width: 2.4rem;
+	height: 2.4rem;
 	fill: currentColor;
 	color: currentColor;
 	transition: all 200ms;
+}
+
+/* fix */
+box-icon[name="history"] {
+	position: relative;
+	left: -1px;
 }

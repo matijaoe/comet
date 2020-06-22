@@ -1,3 +1,39 @@
 @mixin scrollbar {
-    scrollbar-width: thin;
+	scrollbar-width: thin;
+}
+
+$xl: 65em; /* 1040px */
+$lg: 56.25em; /* 900px */
+// $md:;
+$sm: 600px;
+$xs: 400px;
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == xl {
+		/* 1050px / 16px = 65em */
+		@media only screen and (max-width: $xl) {
+			@content;
+		}
+	}
+	@if $breakpoint == lg {
+        /* 900px */
+		@media only screen and (max-width: $lg) {
+			@content;
+		}
+	}
+	@if $breakpoint == md {
+		@media only screen and (max-width: $md) {
+			@content;
+		}
+	}
+	@if $breakpoint == sm {
+		@media only screen and (max-width: $sm) {
+			@content;
+		}
+	}
+	@if $breakpoint == xs {
+		@media only screen and (max-width: $xs) {
+			@content;
+		}
+	}
 }

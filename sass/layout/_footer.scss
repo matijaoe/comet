@@ -51,26 +51,17 @@
 	}
 	.github:hover,
 	.github:focus {
-		color: #6e5494;
+		color: #4078c0;
 		border-color: currentColor;
-		// box-shadow: 0 0 5rem 0.1rem rgba($color: #6e5494, $alpha: 0.6);
+		// box-shadow: 0 0 5rem 0.1rem rgba($color: #4078c0, $alpha: 0.6);
 	}
 
 	.icon {
 		height: 1.6em;
 		width: 1.6em;
-		transition: all 500ms;
-	}
-
-	&__terms {
-		display: flex;
 	}
 
 	&__link {
-		&:first-child {
-			margin-right: 1em;
-		}
-
 		&:hover {
 			text-decoration: underline;
 		}

@@ -7,6 +7,22 @@
 	@include scrollbar;
 	font-weight: 400;
 
+	@include respond(xl) {
+		flex-basis: 23.5rem;
+	}
+	@include respond(lg) {
+		flex-basis: 22rem;
+	}
+
+	transition: all 400ms;
+	// transform-origin: left;
+	transform: scale(1, 1);
+
+	&.hide {
+		// transform: scale(0,1);
+		flex-basis: 0;
+	}
+	
 	> * {
 		border-bottom: $border;
 
@@ -18,6 +34,7 @@
 	&__list {
 		padding: 2em;
 		padding-bottom: 1.8em;
+		transition: all 200ms;
 	}
 
 	&__link {

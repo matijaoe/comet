@@ -4,11 +4,16 @@
 
 .padding-big {
 	padding: 2em;
+
+	@include respond(xl) {
+		padding: 1.6em;
+	}
 }
 
 .border-top {
 	border-top: $border;
 }
+
 .border-bottom {
 	border-bottom: $border;
 }

@@ -8,7 +8,7 @@
 	font-weight: 500;
 
 	&__hero {
-		height: 23rem;
+		height: 28rem;
 		background: url(../img/adventure-calm-clouds-dawn-414171.jpg) no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -22,43 +22,44 @@
 	// CONTACT
 	&__contact {
 		display: flex;
-		flex: 1;
 		margin-left: auto;
-		align-items: center;
+		align-items: flex-start;
 		padding: 2em;
 
 		color: white;
 	}
 
 	&__contact-container {
-		height: 3.4em;
-		width: 3.4em;
+		height: 3em;
+		width: 3em;
 		border-radius: 50%;
 		border: 0.2rem solid var(--theme-color-1-opaque);
 		margin: 0 0.3em;
 		cursor: pointer;
+		opacity: 0.5;
 
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
-		transition: all 200ms;
+		transition: all 250ms;
 
 		&:hover,
 		&:focus {
+			opacity: 1;
 			background: var(--theme-color-1-opaque);
 		}
 	}
 
 	&__icon {
-		width: 1.6em;
-		height: 1.6em;
+		width: 1.4em;
+		height: 1.4em;
 	}
 
 	// INFO
 	&__info {
-		flex: 0 0 40%;
-		padding: 1em;
+		flex: 0 0 auto;
+		padding: 2em 1em;
 
 		display: flex;
 		justify-content: center;
@@ -66,16 +67,32 @@
 		background: var(--black-opaque);
 
 		color: white;
+
+		.icon {
+			cursor: default;
+		}
 	}
-	
+
 	&__info-item {
 		display: flex;
 		align-items: center;
 		margin: 0 1.5em;
 	}
 
-	&__info-data {
+	&__info-data--full {
 		margin-left: 0.6em;
+
+		@include respond(xl) {
+			display: none;
+		}
+	}
+	&__info-data--short {
+		margin-left: 0.6em;
+		display: none;
+
+		@include respond(xl) {
+			display: block;
+		}
 	}
 
 	// MENU
@@ -107,8 +124,8 @@
 	}
 
 	&__menu-link {
-		padding: 2em 0;
-		margin: 0 1em;
+		padding: 1.8em 0.3em;
+		margin: 0 0.5em;
 
 		position: relative;
 
@@ -119,7 +136,7 @@
 			bottom: 0;
 			left: 0;
 			right: 0;
-			height: 0.35rem;
+			height: 0.3rem;
 			padding: 0;
 			margin: 0;
 			background: var(--accent);
