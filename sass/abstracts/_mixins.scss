@@ -1,5 +1,6 @@
 @mixin scrollbar {
 	scrollbar-width: thin;
+	scrollbar-color: var(--border-color) transparent;
 }
 
 $xl: 65em; /* 1040px */
@@ -16,7 +17,7 @@ $xs: 400px;
 		}
 	}
 	@if $breakpoint == lg {
-        /* 900px */
+		/* 900px */
 		@media only screen and (max-width: $lg) {
 			@content;
 		}

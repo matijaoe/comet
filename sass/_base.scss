@@ -49,3 +49,12 @@ box-icon[name="history"] {
 	position: relative;
 	left: -1px;
 }
+
+::-webkit-scrollbar {
+	width: 5px; 
+	background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--border-color);
+}

@@ -21,8 +21,9 @@
 	&.hide {
 		// transform: scale(0,1);
 		flex-basis: 0;
+		border-color: transparent;
 	}
-	
+
 	> * {
 		border-bottom: $border;
 

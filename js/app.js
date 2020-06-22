@@ -15,14 +15,11 @@ const toggleButton = document.getElementById('theme-toggler');
 
 toggleButton.addEventListener('click', () => {
     if (document.body.classList.contains('light-mode')) {
-        document.body.classList.remove('light-mode');
-        document.body.classList.toggle('dark-mode');
+        document.body.classList.replace("light-mode", "dark-mode")
     } else if (document.body.classList.contains('dark-mode')) {
-        document.body.classList.remove('dark-mode');
-        document.body.classList.toggle('amoled-mode');
+        document.body.classList.replace("dark-mode", "amoled-mode")
     } else if (document.body.classList.contains('amoled-mode')) {
-        document.body.classList.remove('amoled-mode');
-        document.body.classList.toggle('light-mode');
+        document.body.classList.replace("amoled-mode", "light-mode")
     }
 });
 
