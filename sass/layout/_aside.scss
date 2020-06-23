@@ -19,15 +19,13 @@
 		flex-basis: 22rem;
 	}
 	@include respond(md) {
-		flex-basis: 0;
+		display: none;
 	}
 
 	transition: all 400ms;
-	// transform-origin: left;
 	transform: scale(1, 1);
 
 	&.hide {
-		// transform: scale(0,1);
 		flex-basis: 0;
 		border-color: transparent;
 	}
@@ -92,7 +90,7 @@
 	}
 }
 
-#categories {
+.categories {
 	.aside__link:hover,
 	.aside__link:focus {
 		.music {
@@ -111,7 +109,7 @@
 			fill: var(--blue-1);
 		}
 		.sport {
-			fill: var(--green-2);
+			fill: var(--orange-2);
 		}
 		.animal {
 			fill: var(--pink-1);
@@ -127,6 +125,9 @@
 		}
 		.business {
 			fill: var(--brown-1);
+		}
+		.book {
+			fill: var(--brown-2);
 		}
 	}
 }

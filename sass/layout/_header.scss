@@ -39,15 +39,17 @@
 
 	&__logo {
 		border-radius: 50%;
-		height: 3.5rem;
-		width: 3.5rem;
-		border: 6px solid var(--logo-color);
+		height: 3.8rem;
+		width: 3.8rem;
 		margin: 0 1.6em;
+		fill: var(--accent);
 		flex-shrink: 0;
 
 		cursor: pointer;
 
 		@include respond(sm) {
+			height: 3.2rem;
+			width: 3.2rem;
 			margin: 0 1em;
 		}
 
@@ -59,7 +61,6 @@
 
 	&__searchbar {
 		min-width: 12rem;
-
 		display: flex;
 		/* for the search button placement */
 		align-items: center;
@@ -126,23 +127,32 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding-right: 2em;
 	flex: 1;
+	text-align: center;
+	margin: 0 auto;
+	margin-right: 1em;
 
 	&__list {
 		display: flex;
 		align-items: center;
 	}
 
+	@include respond(lg) {
+		justify-content: flex-end;
+	}
+
 	&__item {
-		margin: 0 0.8em;
+		margin: 0 0.8vw;
+
+		@include respond(xl) {
+			margin: 0 0.5em;
+		}
 
 		@include respond(lg) {
 			&:not(:first-child) {
 				display: none;
 			}
 		}
-
 		@include respond(sm) {
 			display: none;
 		}
@@ -181,22 +191,22 @@
 		cursor: pointer;
 	}
 
-	.btn {
+	.btn--outline {
 		@include respond(xl) {
 			padding: 0.75em;
 
 			span {
 				display: none;
 			}
+		}
+	}
 
-			.icon {
-				margin: 0;
-			}
+	.icon-upload {
+		width: 2.2rem;
+		height: 2.2rem;
 
-			.icon-upload {
-				width: 2.4rem;
-				height: 2.4rem;
-			}
+		@include respond(xl) {
+			margin: 0;
 		}
 	}
 
@@ -241,10 +251,5 @@
 		color: var(--theme-color-1);
 		display: flex;
 		align-items: center;
-	}
-
-	.icon-upload {
-		width: 2.2rem;
-		height: 2.2rem;
 	}
 }

@@ -1,11 +1,10 @@
 .videos {
-	// padding-top: 0;
-
 	padding: 0 2em;
 
 	@include respond(sm) {
 		padding: 0 1em;
 	}
+
 	@include respond(xxs) {
 		padding: 0;
 	}
@@ -59,6 +58,32 @@
 
 		span {
 			transition: all 250ms;
+			margin-left: 0.6em;
+		}
+
+		.icon--play {
+			margin: 0;
+			position: relative;
+			left: 1px;
+		}
+
+		.btn:hover,
+		.btn:focus {
+			background: var(--accent);
+			color: var(--body-bg);
+
+			.icon {
+				transform: translateX(101%) scale(1.6);
+
+				@include respond(lg) {
+					transform: translateX(0) scale(1.4);
+				}
+			}
+
+			span {
+				opacity: 0;
+				visibility: hidden;
+			}
 		}
 
 		@include respond(lg) {
@@ -68,31 +93,6 @@
 
 			span {
 				display: none;
-			}
-
-			.icon {
-				margin: 0;
-				position: relative;
-				left: 1px;
-			}
-		}
-
-		.btn:hover,
-		.btn:focus {
-			background: var(--accent);
-			color: var(--body-bg);
-
-			.icon {
-				transform: translateX(104%) scale(1.25);
-
-				@include respond(lg) {
-					transform: translateX(0) scale(1.25);
-				}
-			}
-
-			span {
-				// transform: translateX(90px);
-				opacity: 0;
 			}
 		}
 	}
@@ -104,10 +104,8 @@
 
 		&:hover,
 		&:focus {
-			color: var(--theme-color-2);
-
 			.icon {
-				color: var(--theme-color-3);
+				color: var(--accent);
 			}
 		}
 	}
@@ -201,7 +199,7 @@
 
 			@include respond(xl) {
 				padding: 0.75em;
-				/* disable strechinh buttons with flag images */
+				/* disable streching buttons with flag images */
 				align-self: center;
 
 				span {

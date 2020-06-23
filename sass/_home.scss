@@ -20,3 +20,11 @@
 	display: flex;
 	overflow: auto;
 }
+
+.content-wrapper {
+	flex: 1;
+    overflow: auto;
+    @include scrollbar;
+}
+
+
