@@ -3,20 +3,18 @@
 	justify-content: space-between;
 	align-items: center;
 	font-size: 0.9em;
-	padding: 2em;
+	padding: 3em 2em;
 
 	@include respond(xl) {
-		padding: 1.6em;
+		padding: 2.5em 1.6em;
 	}
-	@include respond(md) {
-		padding: 1.6em;
-	}
+
 	@include respond(sm) {
-		padding: 1em;
+		padding: 2em 1em;
 		flex-direction: column;
 
 		> * {
-			margin: .5em 0;
+			margin: 0.5em 0;
 		}
 	}
 
@@ -31,8 +29,6 @@
 
 	&__icon-box {
 		border-radius: 50%;
-		border: $border;
-		border-color: transparent;
 		display: grid;
 		place-content: center;
 		height: 3.2em;
@@ -41,41 +37,58 @@
 		box-shadow: 0 0 0rem 0rem rgba($color: #3b5998, $alpha: 0.5);
 		color: currentColor;
 
-		transition: all 250ms;
+		transition: all 350ms cubic-bezier(.99,1,.64,1.32);
+		
 
 		overflow: hidden;
 		cursor: pointer;
+
+		.icon {
+			fill: currentColor;
+			transition: all 100ms ease-in-out;
+		}
+
+		&:hover, &:focus {
+			transform: rotate(10deg);
+		}
+	}
+
+	.facebook {
+		color: #3b5998;
+	}
+	.instagram {
+		color: #c11584;
+	}
+	.twitter {
+		color: #1da1f2;
+	}
+
+	.reddit {
+		color: #ff4500;
+	}
+	.github {
+		color: #4078c0;
 	}
 
 	.facebook:hover,
 	.facebook:focus {
-		color: #3b5998;
-		border-color: currentColor;
-		// box-shadow: 0 0 5rem 0.1rem rgba($color: #1b5998, $alpha: 0.6);
+		box-shadow: 0 0 4rem 0.05em rgba($color: #1b5998, $alpha: 0.8);
 	}
 	.instagram:hover,
 	.instagram:focus {
-		color: #c11584;
-		border-color: currentColor;
-		// box-shadow: 0 0 5rem 0.1rem rgba($color: #c13584, $alpha: 0.6);
+		box-shadow: 0 0 4rem 0.05em rgba($color: #c13584, $alpha: 0.8);
 	}
 	.twitter:hover,
 	.twitter:focus {
-		color: #1da1f2;
-		border-color: currentColor;
-		// box-shadow: 0 0 5rem 0.1rem rgba($color: #1da1f2, $alpha: 0.6);
+		box-shadow: 0 0 4rem 0.05em rgba($color: #1da1f2, $alpha: 0.8);
 	}
 	.reddit:hover,
 	.reddit:focus {
-		color: #ff4500;
-		border-color: currentColor;
-		// box-shadow: 0 0 5rem 0.1rem rgba($color: #ff4500, $alpha: 0.6);
+		box-shadow: 0 0 4rem 0.05em rgba($color: #ff4500, $alpha: 0.8);
 	}
 	.github:hover,
 	.github:focus {
-		color: #4078c0;
-		border-color: currentColor;
-		// box-shadow: 0 0 5rem 0.1rem rgba($color: #4078c0, $alpha: 0.6);
+		box-shadow: 0 0 4rem 0.05em rgba($color: #4078c0, $alpha: 0.8);
 	}
 
 	.icon {

@@ -41,7 +41,7 @@ ul {
 	width: 2.4rem;
 	height: 2.4rem;
 	fill: currentColor;
-	transition: all 250ms;
+	transition: all 250ms ease-in-out;
 
 	@include respond(sm) {
 		width: 2rem;

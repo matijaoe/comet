@@ -105,7 +105,7 @@ ul {
   width: 2.4rem;
   height: 2.4rem;
   fill: currentColor;
-  transition: all 250ms; }
+  transition: all 250ms ease-in-out; }
   @media only screen and (max-width: 620px) {
     .icon {
       width: 2rem;
@@ -508,7 +508,7 @@ box-icon[name="history"] {
         padding: 1.6em; } }
     @media only screen and (max-width: 750px) {
       .videos__footer {
-        padding: 1.6em 0.6em; } }
+        padding: 1.6em 1.2em; } }
     @media only screen and (max-width: 530px) {
       .videos__footer {
         flex-direction: row;
@@ -577,11 +577,10 @@ box-icon[name="history"] {
         flex-direction: column; } }
     .videos__nav-list.primary {
       color: var(--theme-color-3); }
-  .videos__nav-item {
-    margin: 0 0.6em; }
   .videos__nav-link {
     display: block;
-    transition: all 250ms; }
+    transition: all 250ms;
+    padding: 0.2em 0.6em; }
   .videos__nav-item:nth-child(odd):hover .videos__nav-link,
   .videos__nav-item:nth-child(odd):focus .videos__nav-link {
     transform: rotate(-5deg) scale(1.1);
@@ -949,20 +948,17 @@ box-icon[name="history"] {
   justify-content: space-between;
   align-items: center;
   font-size: 0.9em;
-  padding: 2em;
+  padding: 3em 2em;
   /* 1050px / 16px = 65em */ }
   @media only screen and (max-width: 65em) {
     .footer {
-      padding: 1.6em; } }
-  @media only screen and (max-width: 750px) {
-    .footer {
-      padding: 1.6em; } }
+      padding: 2.5em 1.6em; } }
   @media only screen and (max-width: 620px) {
     .footer {
-      padding: 1em;
+      padding: 2em 1em;
       flex-direction: column; }
       .footer > * {
-        margin: .5em 0; } }
+        margin: 0.5em 0; } }
   .footer__socials {
     display: flex;
     justify-content: center; }
@@ -971,8 +967,6 @@ box-icon[name="history"] {
         order: -1; } }
   .footer__icon-box {
     border-radius: 50%;
-    border: 3px solid var(--border-color);
-    border-color: transparent;
     display: grid;
     place-content: center;
     height: 3.2em;
@@ -980,29 +974,39 @@ box-icon[name="history"] {
     margin: 0 0.3em;
     box-shadow: 0 0 0rem 0rem rgba(59, 89, 152, 0.5);
     color: currentColor;
-    transition: all 250ms;
+    transition: all 350ms cubic-bezier(0.99, 1, 0.64, 1.32);
     overflow: hidden;
     cursor: pointer; }
+    .footer__icon-box .icon {
+      fill: currentColor;
+      transition: all 100ms ease-in-out; }
+    .footer__icon-box:hover, .footer__icon-box:focus {
+      transform: rotate(10deg); }
+  .footer .facebook {
+    color: #3b5998; }
+  .footer .instagram {
+    color: #c11584; }
+  .footer .twitter {
+    color: #1da1f2; }
+  .footer .reddit {
+    color: #ff4500; }
+  .footer .github {
+    color: #4078c0; }
   .footer .facebook:hover,
   .footer .facebook:focus {
-    color: #3b5998;
-    border-color: currentColor; }
+    box-shadow: 0 0 4rem 0.05em rgba(27, 89, 152, 0.8); }
   .footer .instagram:hover,
   .footer .instagram:focus {
-    color: #c11584;
-    border-color: currentColor; }
+    box-shadow: 0 0 4rem 0.05em rgba(193, 53, 132, 0.8); }
   .footer .twitter:hover,
   .footer .twitter:focus {
-    color: #1da1f2;
-    border-color: currentColor; }
+    box-shadow: 0 0 4rem 0.05em rgba(29, 161, 242, 0.8); }
   .footer .reddit:hover,
   .footer .reddit:focus {
-    color: #ff4500;
-    border-color: currentColor; }
+    box-shadow: 0 0 4rem 0.05em rgba(255, 69, 0, 0.8); }
   .footer .github:hover,
   .footer .github:focus {
-    color: #4078c0;
-    border-color: currentColor; }
+    box-shadow: 0 0 4rem 0.05em rgba(64, 120, 192, 0.8); }
   .footer .icon {
     height: 1.6em;
     width: 1.6em;
