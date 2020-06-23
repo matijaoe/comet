@@ -1,5 +1,14 @@
 .videos {
-	padding-top: 0;
+	// padding-top: 0;
+
+	padding: 0 2em;
+
+	@include respond(sm) {
+		padding: 0 1em;
+	}
+	@include respond(xxs) {
+		padding: 0;
+	}
 
 	&__header {
 		display: flex;
@@ -8,6 +17,10 @@
 
 		padding: 0 2.2em;
 		margin: 2em 0;
+
+		@include respond(xs) {
+			margin: 1.2em 0;
+		}
 	}
 
 	&__menu-trending {
@@ -29,6 +42,10 @@
 
 		.selected {
 			color: var(--theme-color-2);
+		}
+
+		@include respond(xs) {
+			display: none;
 		}
 	}
 
@@ -109,26 +126,50 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0 2em;
-		margin: 3.5em 0 1.5em;
+		padding: 3.5em 2em;
 
-		.icon {
-			// animation: spin;
+		@include respond(sm) {
+			padding: 2.5em 2em;
 		}
 	}
 
 	&__footer {
 		display: flex;
 		flex-direction: column;
+		padding: 2em;
+
+		@include respond(xl) {
+			padding: 1.6em;
+		}
+		@include respond(md) {
+			padding: 1.6em 0.6em;
+		}
+
+		@include respond(xs) {
+			flex-direction: row;
+			justify-content: space-evenly;
+			text-align: center;
+		}
 
 		&-row {
 			display: flex;
 			justify-content: space-between;
-			align-items: center;
 			align-items: stretch;
+
+			@include respond(sm) {
+				justify-content: center;
+			}
 
 			&:first-child {
 				margin-bottom: 0.5em;
+
+				@include respond(sm) {
+					margin-bottom: 0.8em;
+				}
+
+				@include respond(xs) {
+					margin: 0;
+				}
 			}
 		}
 
@@ -182,6 +223,10 @@
 					transform: scale(1);
 				}
 			}
+
+			@include respond(sm) {
+				display: none;
+			}
 		}
 	}
 
@@ -195,24 +240,14 @@
 	&__nav-list {
 		display: flex;
 
+		@include respond(xs) {
+			flex-direction: column;
+		}
+
 		&.primary {
 			color: var(--theme-color-3);
 		}
 	}
-
-	// &__nav--main {
-	// 	display: flex;
-	// 	align-items: center;
-	// 	justify-content: center;
-	// 	color: var(--theme-color-3);
-	// 	margin-bottom: 1.2em;
-	// }
-
-	// &__nav--secondary {
-	// 	display: flex;
-	// 	align-items: center;
-	// 	justify-content: center;
-	// }
 
 	&__nav-item {
 		margin: 0 0.6em;
@@ -238,7 +273,7 @@
 	background: var(--card-bg);
 	border-radius: 0.7rem;
 	overflow: hidden;
-	box-shadow: 0.2rem 0.3rem 0.6rem .2rem rgba($color: black, $alpha: 0.04);
+	box-shadow: 0.2rem 0.3rem 0.6rem 0.2rem rgba($color: black, $alpha: 0.04);
 
 	cursor: pointer;
 
@@ -306,7 +341,6 @@
 				display: none;
 			}
 		}
-
 	}
 
 	&__user-photo {

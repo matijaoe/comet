@@ -10,6 +10,10 @@
 	overflow: hidden;
 	border-left: $border;
 	border-right: $border;
+
+	@media only screen and (max-width: 1400px) {
+		border: 0;
+	}
 }
 
 .main-wrapper {

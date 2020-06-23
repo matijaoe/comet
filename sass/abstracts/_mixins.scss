@@ -5,9 +5,10 @@
 
 $xl: 65em; /* 1040px */
 $lg: 56.25em; /* 900px */
-// $md:;
-$sm: 600px;
-$xs: 400px;
+$md: 750px;
+$sm: 620px;
+$xs: 530px;
+$xxs: 390px;
 
 @mixin respond($breakpoint) {
 	@if $breakpoint == xl {
@@ -34,6 +35,11 @@ $xs: 400px;
 	}
 	@if $breakpoint == xs {
 		@media only screen and (max-width: $xs) {
+			@content;
+		}
+	}
+	@if $breakpoint == xxs {
+		@media only screen and (max-width: $xxs) {
 			@content;
 		}
 	}

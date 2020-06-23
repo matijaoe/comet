@@ -8,6 +8,9 @@
 	@include respond(xl) {
 		padding: 1.6em;
 	}
+	@include respond(sm) {
+		padding: 0;
+	}
 }
 
 .border-top {

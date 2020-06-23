@@ -3,9 +3,30 @@
 	justify-content: space-between;
 	align-items: center;
 	font-size: 0.9em;
+	padding: 2em;
+
+	@include respond(xl) {
+		padding: 1.6em;
+	}
+	@include respond(md) {
+		padding: 1.6em;
+	}
+	@include respond(sm) {
+		padding: 1em;
+		flex-direction: column;
+
+		> * {
+			margin: .5em 0;
+		}
+	}
+
 	&__socials {
 		display: flex;
 		justify-content: center;
+
+		@include respond(sm) {
+			order: -1;
+		}
 	}
 
 	&__icon-box {

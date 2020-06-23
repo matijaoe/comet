@@ -1,12 +1,23 @@
+.profile-wrapper {
+	padding: 0 2em;
+
+	@include respond(sm) {
+		padding: 0 1em;
+	}
+	@include respond(xs) {
+		padding: 0;
+	}
+}
+
 .profile {
 	background: var(--card-bg);
-	box-shadow: 0.1rem 0.3rem 0.6rem .2rem rgba($color: black, $alpha: 0.04);
+	box-shadow: 0.1rem 0.3rem 0.6rem 0.2rem rgba($color: black, $alpha: 0.04);
 
 	border-radius: 0.7rem;
 	overflow: hidden;
 
 	&__hero {
-		height: 28rem;
+		min-height: 22rem;
 		background: url(../img/adventure-calm-clouds-dawn-414171.jpg) no-repeat;
 		background-size: cover;
 		background-clip: border-box;
@@ -16,6 +27,10 @@
 		flex-direction: column;
 		justify-content: space-between;
 		color: var(--header-bg);
+
+		@include respond(sm) {
+			min-height: 18rem;
+		}
 	}
 
 	// CONTACT
@@ -35,7 +50,6 @@
 		border: 0.2rem solid var(--theme-color-1-opaque);
 		margin: 0 0.3em;
 		cursor: pointer;
-		opacity: 0.5;
 
 		display: flex;
 		align-items: center;
@@ -45,7 +59,6 @@
 
 		&:hover,
 		&:focus {
-			opacity: 1;
 			background: var(--theme-color-1-opaque);
 		}
 	}
@@ -55,7 +68,7 @@
 		height: 1.4em;
 	}
 
-	// INFO
+	// STATS INFO
 	&__info {
 		flex: 0 0 auto;
 		padding: 2em 1em;
@@ -63,6 +76,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 		background: var(--black-opaque);
 
 		color: white;
@@ -70,12 +84,29 @@
 		.icon {
 			cursor: default;
 		}
+
+		@include respond(sm) {
+			padding: 1em;
+		}
+		@include respond(xs) {
+			padding: 0.5em;
+		}
 	}
 
 	&__info-item {
 		display: flex;
 		align-items: center;
 		margin: 0 1.5em;
+
+		@include respond(xs) {
+			flex-direction: column;
+		}
+		@include respond(xxs) {
+			&:nth-child(3),
+			&:nth-child(4) {
+				display: none;
+			}
+		}
 	}
 
 	&__info-data--full {
@@ -83,6 +114,10 @@
 
 		@include respond(xl) {
 			display: none;
+		}
+
+		@include respond(xs) {
+			margin-left: 0;
 		}
 	}
 	&__info-data--short {
@@ -92,20 +127,53 @@
 		@include respond(xl) {
 			display: block;
 		}
+
+		@include respond(xs) {
+			margin-left: 0;
+		}
 	}
 
 	// MENU
 	&__menu {
+		padding: 0 1.8em;
+		font-weight: 500;
+
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 0 1.8em;
 
-		font-weight: 500;
+		@include respond(xl) {
+			font-size: 0.9em;
+			padding: 0 1.2em;
+		}
+
+		@include respond(sm) {
+			flex-direction: column;
+			padding: 0.8em;
+			padding-bottom: 0;
+		}
 	}
 	&__user {
 		display: flex;
 		align-items: center;
+
+		@include respond(sm) {
+			flex-direction: column;
+		}
+	}
+
+	&__user-data--short {
+		display: none;
+	}
+
+	@include respond(lg) {
+		&__user-data--full {
+			display: none;
+		}
+
+		&__user-data--short {
+			display: block;
+		}
 	}
 
 	&__photo {
@@ -113,15 +181,31 @@
 		height: 42px;
 		border-radius: 50%;
 		margin-right: 1em;
+
+		@include respond(sm) {
+			margin-right: 0;
+			margin-bottom: 0.6em;
+		}
 	}
 
 	&__name {
 		color: var(--theme-color-3);
+
+		@include respond(lg) {
+			display: none;
+		}
+		@include respond(sm) {
+			display: block;
+		}
 	}
 
 	&__menu-nav {
 		display: flex;
 		align-items: stretch;
+
+		@include respond(sm) {
+			order: 3;
+		}
 	}
 
 	&__menu-link {
@@ -129,6 +213,10 @@
 		margin: 0 0.5em;
 
 		position: relative;
+
+		@include respond(sm) {
+			padding: 1em 0.5em;
+		}
 
 		&::before {
 			content: "";
@@ -161,8 +249,57 @@
 	}
 
 	&__menu-buttons {
+		display: flex;
+
+		@include respond(md) {
+			margin: 1em 0 0.5em;
+		}
+
 		.btn {
 			color: var(--theme-color-1);
+
+			.icon {
+				fill: var(--theme-color-1);
+			}
+
+			@include respond(md) {
+				&:first-child {
+					display: none;
+				}
+
+				&:last-child {
+					border-top-left-radius: 100rem;
+					border-bottom-left-radius: 100rem;
+					border-width: 0;
+					padding: 1em;
+				}
+			}
+
+			&--follow:hover,
+			&--follow:active,
+			&--follow:focus {
+				background: var(--accent);
+				border-color: var(--accent);
+				color: var(--header-bg);
+
+				.icon {
+					fill: var(--header-bg);
+				}
+			}
+
+			@include respond(sm) {
+				&:first-child {
+					display: block;
+				}
+
+				&:last-child {
+					border-width: 0.22rem;
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+					padding: 0.75em 1.5em;
+					padding-left: 1em;
+				}
+			}
 		}
 	}
 }
