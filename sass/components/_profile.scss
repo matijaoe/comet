@@ -1,8 +1,10 @@
 .profile-wrapper {
 	padding: 0 2em;
+	padding-top: 2em;
 
 	@include respond(sm) {
 		padding: 0 1em;
+		padding-top: 1em;
 	}
 	@include respond(xs) {
 		padding: 0;
@@ -37,17 +39,20 @@
 	&__contact {
 		display: flex;
 		margin-left: auto;
-		align-items: flex-start;
 		padding: 2em;
 
 		color: white;
+
+		@include respond(sm) {
+			margin: 0 auto;
+			padding: 1em;
+		}
 	}
 
 	&__contact-container {
 		height: 3em;
 		width: 3em;
 		border-radius: 50%;
-		border: 0.2rem solid var(--theme-color-1-opaque);
 		margin: 0 0.3em;
 		cursor: pointer;
 
@@ -60,6 +65,7 @@
 		&:hover,
 		&:focus {
 			background: var(--theme-color-1-opaque);
+			backdrop-filter: blur;
 		}
 	}
 
@@ -149,7 +155,7 @@
 
 		@include respond(sm) {
 			flex-direction: column;
-			padding: 0.8em;
+			padding: 1.2em;
 			padding-bottom: 0;
 		}
 	}

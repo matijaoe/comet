@@ -185,10 +185,12 @@ box-icon[name="history"] {
       padding-left: 1em; }
 
 .profile-wrapper {
-  padding: 0 2em; }
+  padding: 0 2em;
+  padding-top: 2em; }
   @media only screen and (max-width: 620px) {
     .profile-wrapper {
-      padding: 0 1em; } }
+      padding: 0 1em;
+      padding-top: 1em; } }
   @media only screen and (max-width: 530px) {
     .profile-wrapper {
       padding: 0; } }
@@ -215,14 +217,16 @@ box-icon[name="history"] {
   .profile__contact {
     display: flex;
     margin-left: auto;
-    align-items: flex-start;
     padding: 2em;
     color: white; }
+    @media only screen and (max-width: 620px) {
+      .profile__contact {
+        margin: 0 auto;
+        padding: 1em; } }
   .profile__contact-container {
     height: 3em;
     width: 3em;
     border-radius: 50%;
-    border: 0.2rem solid var(--theme-color-1-opaque);
     margin: 0 0.3em;
     cursor: pointer;
     display: flex;
@@ -230,7 +234,8 @@ box-icon[name="history"] {
     justify-content: center;
     transition: all 250ms; }
     .profile__contact-container:hover, .profile__contact-container:focus {
-      background: var(--theme-color-1-opaque); }
+      background: var(--theme-color-1-opaque);
+      backdrop-filter: blur; }
   .profile__icon {
     width: 1.4em;
     height: 1.4em; }
@@ -294,7 +299,7 @@ box-icon[name="history"] {
     @media only screen and (max-width: 620px) {
       .profile__menu {
         flex-direction: column;
-        padding: 0.8em;
+        padding: 1.2em;
         padding-bottom: 0; } }
   .profile__user {
     display: flex;
@@ -755,6 +760,12 @@ box-icon[name="history"] {
   padding: 1.2em 2.4em;
   border-bottom: 3px solid var(--border-color);
   box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.01); }
+  @media only screen and (max-width: 620px) {
+    .header {
+      padding: 1em 1.8em; } }
+  @media only screen and (max-width: 390px) {
+    .header {
+      padding: 1em 1.2em; } }
   .header__left {
     display: flex;
     align-items: center; }
@@ -765,6 +776,9 @@ box-icon[name="history"] {
     width: 2.8rem;
     vertical-align: middle;
     fill: currentColor; }
+    @media only screen and (max-width: 390px) {
+      .header__menu-icon {
+        display: none; } }
   .header__logo {
     border-radius: 50%;
     height: 3.5rem;
@@ -773,10 +787,18 @@ box-icon[name="history"] {
     margin: 0 1.6em;
     flex-shrink: 0;
     cursor: pointer; }
+    @media only screen and (max-width: 620px) {
+      .header__logo {
+        margin: 0 1em; } }
+    @media only screen and (max-width: 390px) {
+      .header__logo {
+        margin: 0;
+        margin-right: 1em; } }
   .header__searchbar {
     min-width: 12rem;
     display: flex;
     /* for the search button placement */
+    align-items: center;
     position: relative;
     font-size: 1em; }
   .header__search-btn {
@@ -795,12 +817,11 @@ box-icon[name="history"] {
       fill: var(--theme-color-2); }
   .header__search-icon {
     color: var(--theme-color-1);
-    vertical-align: middle;
-    height: 1.8rem;
-    width: 1.8rem;
+    height: 2rem;
+    width: 2rem;
     fill: currentColor;
     position: relative;
-    top: 1px; }
+    top: 1.5px; }
   .header__search-input {
     width: 100%;
     font-family: inherit;
@@ -810,7 +831,7 @@ box-icon[name="history"] {
     color: var(--theme-color-2);
     border-radius: 100rem;
     border: 2px solid transparent;
-    padding: 0.5em 2.2em;
+    padding: 0.5em 2.5em;
     padding-right: 1em;
     transition: all 200ms; }
     .header__search-input:hover, .header__search-input:focus {
@@ -828,7 +849,14 @@ box-icon[name="history"] {
     display: flex;
     align-items: center; }
   .nav__item {
-    margin: 0 0.8em; }
+    margin: 0 0.8em;
+    /* 900px */ }
+    @media only screen and (max-width: 56.25em) {
+      .nav__item:not(:first-child) {
+        display: none; } }
+    @media only screen and (max-width: 620px) {
+      .nav__item {
+        display: none; } }
   .nav__link {
     padding: 0.4em;
     /* for the pseudoelement */
@@ -847,21 +875,48 @@ box-icon[name="history"] {
 
 .user-nav {
   display: flex;
-  align-items: center;
-  /* 1050px / 16px = 65em */ }
+  align-items: center; }
   .user-nav > * {
     cursor: pointer; }
+  .user-nav .btn {
+    /* 1050px / 16px = 65em */ }
+    @media only screen and (max-width: 65em) {
+      .user-nav .btn {
+        padding: 0.75em; }
+        .user-nav .btn span {
+          display: none; }
+        .user-nav .btn .icon {
+          margin: 0; }
+        .user-nav .btn .icon-upload {
+          width: 2.4rem;
+          height: 2.4rem; } }
   .user-nav__upload {
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 530px) {
+      .user-nav__upload {
+        display: none; } }
   .user-nav__user-photo {
     border-radius: 50%;
     margin: 0 1.5em; }
+    @media only screen and (max-width: 620px) {
+      .user-nav__user-photo {
+        margin: 0 1em; } }
+    @media only screen and (max-width: 530px) {
+      .user-nav__user-photo {
+        display: none; } }
   .user-nav__icon--notifications {
     color: var(--theme-color-1);
     display: flex;
     align-items: center;
-    margin-left: 2em; }
+    margin-left: 2em;
+    /* 1050px / 16px = 65em */ }
+    @media only screen and (max-width: 65em) {
+      .user-nav__icon--notifications {
+        margin-left: 1em; } }
+    @media only screen and (max-width: 530px) {
+      .user-nav__icon--notifications {
+        display: none; } }
   .user-nav__icon--dropdown {
     color: var(--theme-color-1);
     display: flex;
@@ -869,18 +924,6 @@ box-icon[name="history"] {
   .user-nav .icon-upload {
     width: 2.2rem;
     height: 2.2rem; }
-  @media only screen and (max-width: 65em) {
-    .user-nav .btn {
-      padding: 0.75em; }
-    .user-nav .btn span {
-      display: none; }
-    .user-nav .icon {
-      margin: 0; }
-    .user-nav .icon-upload {
-      width: 2.4rem;
-      height: 2.4rem; }
-    .user-nav__icon--notifications {
-      margin-left: 1em; } }
 
 .footer {
   display: flex;
