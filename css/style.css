@@ -274,7 +274,7 @@ img {
   background-color: var(--header-bg);
   color: var(--theme-color-3);
   transition: all 250ms; }
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 620px) {
     .dropdown {
       flex-direction: column; } }
   .dropdown label {

@@ -19,7 +19,7 @@
 
 	transition: all 250ms;
 
-	@include respond(md) {
+	@include respond(sm) {
 		flex-direction: column;
 	}
 
