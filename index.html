@@ -11,21 +11,20 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     </head>
 
-    <body class="light-mode">
+    <body>
         <div class="app-wrapper">
             <header class="header">
                 <div class="header__left">
                     <div class="header__menu" id="hamburger-menu">
                         <box-icon name='menu-alt-left' class="header__menu-icon icon"></box-icon>
                     </div>
-                    <box-icon name='meteor' type='solid' class="header__logo" id="theme-toggler" title="ide gas"></box-icon>
+                    <box-icon name='meteor' type='solid' class="header__logo tilt-in-fwd-tr" id="theme-toggler" title="ide gas"></box-icon>
                     <div class="header__searchbar">
                         <button class="header__search-btn">
                             <box-icon name='search' class="header__search-icon"></box-icon>
                         </button>
                         <input type="text" name="search" id="search" class="header__search-input" placeholder="Search..." autocomplete="off">
                     </div>
-
                 </div>
 
                 <nav class="nav">
@@ -38,15 +37,39 @@
 
                 <div class="user-nav">
                     <div class="user-nav__upload">
-                        <button class="btn btn--outline">
-                            <box-icon name='cloud-upload' type='solid' animation='fade-up-hover' class="icon icon-upload margin-r"></box-icon>
+                        <button class="btn btn--outline btn--upload slide-in-blurred-right" id="btn-upload">
+                            <box-icon name='cloud-upload' type='solid' class="icon icon--upload margin-r" animation='' id="icon-upload"></box-icon>
                             <span>Upload</span>
                         </button>
                     </div>
 
                     <box-icon name='bell' type='solid' animation='tada-hover' class="user-nav__icon--notifications icon"></box-icon>
                     <img class="user-nav__user-photo" src="img/user1.jpg" alt="user" width="40" height="40">
-                    <box-icon name='chevron-down' type='solid' class="user-nav__icon--dropdown icon"></box-icon>
+                    <box-icon name='chevron-down' type='solid' class="user-nav__icon--dropdown icon" id="dropdown-icon"></box-icon>
+                    <div class="user-nav__dropdown dropdown closed" id="dropdown">
+                        <div class="dropdown__chooser dropdown__chooser--theme">
+                            <label>Theme</label>
+                            <div class="dropdown__options">
+                                <div class="dropdown__option dropdown__option--theme" id="light-option"></div>
+                                <div class="dropdown__option dropdown__option--theme" id="dark-option"></div>
+                                <div class="dropdown__option dropdown__option--theme" id="amoled-option"></div>
+                            </div>
+                        </div>
+                        <div class="dropdown__chooser dropdown__chooser--accents">
+                            <label>Accent</label>
+                            <div class="dropdown__options">
+                                <div class="dropdown__option dropdown__option--accent" id="red-1"></div>
+                                <div class="dropdown__option dropdown__option--accent selected" id="orange-1"></div>
+                                <div class="dropdown__option dropdown__option--accent" id="blue-1"></div>
+                                <div class="dropdown__option dropdown__option--accent" id="purple-1"></div>
+                                <div class="dropdown__option dropdown__option--accent" id="green-1"></div>
+                                <div class="dropdown__option dropdown__option--accent" id="pink-1"></div>
+                                <div class="dropdown__option dropdown__option--accent" id="purple-2"></div>
+                                <div class="dropdown__option dropdown__option--accent" id="green-2"></div>
+                                <div class="dropdown__option dropdown__option--accent" id="pink-2"></div>
+                            </div>
+
+                        </div>
             </header>
 
             <div class="main-wrapper">
@@ -71,7 +94,7 @@
                         <li class="aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
-                                    <box-icon name='flame' type='solid' class="aside__icon icon"></box-icon>
+                                    <box-icon name='trending-up' class="aside__icon icon"></box-icon>
                                 </div>
                                 Trending
                             </a>
@@ -189,7 +212,7 @@
                         <li class=" aside__item">
                             <a href="#" class="aside__link">
                                 <div class="aside__placeholder">
-                                    <box-icon name='music' type='solid' animation='tada-hover' class="aside__icon icon music"></box-icon>
+                                    <box-icon name='music' type='solid' class="aside__icon icon music"></box-icon>
                                 </div>
                                 Music
                             </a>
@@ -197,7 +220,7 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <box-icon name='game' type='solid' animation='tada-hover' class="aside__icon icon gaming"></box-icon>
+                                        <box-icon name='game' type='solid' class="aside__icon icon gaming"></box-icon>
                                     </div>
                                     Gaming
                                 </a>
@@ -205,7 +228,7 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <box-icon name='happy-beaming' type='solid' animation='tada-hover' class="aside__icon icon comedy"></box-icon>
+                                        <box-icon name='happy-beaming' type='solid' class="aside__icon icon comedy"></box-icon>
                                     </div>
                                     Comedy
                                 </a>
@@ -213,7 +236,7 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <box-icon name='camera-movie' type='solid' animation='tada-hover' class="aside__icon icon movie"></box-icon>
+                                        <box-icon name='camera-movie' type='solid' class="aside__icon icon movie"></box-icon>
                                     </div>
                                     Movies
                                 </a>
@@ -222,7 +245,7 @@
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
                                         <ion-icon name="fast-food" class="aside__icon icon food"></ion-icon>
-                                        <!-- <box-icon name='cookie' type='solid' animation='tada-hover' class="aside__icon icon food"></box-icon> -->
+                                        <!-- <box-icon name='cookie' type='solid' class="aside__icon icon food"></box-icon> -->
                                     </div>
                                     Food
                                 </a>
@@ -238,7 +261,7 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <box-icon name='ball' type='solid' animation='tada-hover' class="aside__icon icon sport"></box-icon>
+                                        <box-icon name='ball' type='solid' class="aside__icon icon sport"></box-icon>
                                     </div>
                                     Sports
                                 </a>
@@ -246,7 +269,7 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <box-icon name='baidu' type='logo' animation='tada-hover' class="aside__icon icon animal"></box-icon>
+                                        <box-icon name='baidu' type='logo' class="aside__icon icon animal"></box-icon>
                                     </div>
                                     Animal
                                 </a>
@@ -254,7 +277,7 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <box-icon type='solid' animation='tada-hover' name='baby-carriage' class="aside__icon icon baby"></box-icon>
+                                        <box-icon type='solid' name='baby-carriage' class="aside__icon icon baby"></box-icon>
                                     </div>
                                     Baby
                                 </a>
@@ -278,7 +301,7 @@
                             <li class="aside__item">
                                 <a href="#" class="aside__link">
                                     <div class="aside__placeholder">
-                                        <box-icon name='briefcase' type='solid' animation='tada-hover' class="aside__icon icon business"></box-icon>
+                                        <box-icon name='briefcase' type='solid' class="aside__icon icon business"></box-icon>
                                     </div>
                                     Business
                                 </a>
@@ -537,19 +560,19 @@
                             <p>@2020 Video App</p>
                         </div>
                         <div class="footer__socials">
-                            <div class="footer__icon-box facebook">
+                            <div class="footer__icon-box facebook shake-slow">
                                 <box-icon type='logo' name='facebook' class="icon"></box-icon>
                             </div>
-                            <div class="footer__icon-box instagram">
+                            <div class="footer__icon-box instagram shake-slow">
                                 <box-icon name='instagram-alt' type='logo' class="icon"></box-icon>
                             </div>
-                            <div class="footer__icon-box twitter">
+                            <div class="footer__icon-box twitter shake-slow">
                                 <box-icon name='twitter' type='logo' class="icon"></box-icon>
                             </div>
-                            <div class="footer__icon-box reddit">
+                            <div class="footer__icon-box reddit shake-slow">
                                 <box-icon name='reddit' type='logo' class="icon"></box-icon>
                             </div>
-                            <div class="footer__icon-box github">
+                            <div class="footer__icon-box github shake-slow">
                                 <box-icon name='github' type='logo' class="icon"></box-icon>
                             </div>
                         </div>

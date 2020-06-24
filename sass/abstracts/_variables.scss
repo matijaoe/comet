@@ -1,24 +1,8 @@
 $border: 3px solid var(--border-color);
+$card-shadow: 0.2rem 0.3rem 0.6rem 0.2rem rgba($color: black, $alpha: 0.04);
 
 :root {
 	--body-font: "DM Sans", "Work Sans", sans-serif;
-
-	// LIGHT MODE
-	--body-bg: #f2f2f2;
-	--theme-bg: #fafafa;
-	--border-color: #efefef;
-	--header-bg: #fff;
-	--card-bg: transparent;
-
-	--theme-color-1: #b3b3b3;
-	--theme-color-1-opaque: hsla(0, 0%, 70%, 0.3);
-	--theme-color-2: #808080;
-	--theme-color-3: #494949;
-	--black-opaque: rgba(0, 0, 0, 0.25);
-
-	// UNIVERSAL
-	--logo-color: #f13a2f;
-	--accent: var(--logo-color);
 
 	// COLORS
 	--red-1: #ea2027;
@@ -36,28 +20,11 @@ $border: 3px solid var(--border-color);
 	--brown-2: #94877b;
 	--pink-1: #e28397;
 	--pink-2: #ff1f5a;
-}
 
-.dark-mode {
-	--body-bg: #1e222b;
-	--theme-bg: #212835;
-	--border-color: #444b5f;
-	--header-bg: #212835;
-	--card-bg: #2f3646;
+	// UNIVERSAL
+	--logo-color: #f13a2f;
+	--accent: var(--logo-color);
 
-	--theme-color-1: #fefffd;
-	--theme-color-2: #d1d1d1;
-	--theme-color-3: #f5f5f5;
-}
-
-.amoled-mode {
-	--body-bg: #000;
-	--theme-bg: #000;
-	--border-color: #222;
-	--header-bg: #000;
-	--card-bg: #000;
-
-	--theme-color-1: #fefffd;
-	--theme-color-2: #d1d1d1;
-	--theme-color-3: #f5f5f5;
+	--theme-color-1-opaque: hsla(0, 0%, 70%, 0.3);
+	--black-opaque: rgba(0, 0, 0, 0.25);
 }

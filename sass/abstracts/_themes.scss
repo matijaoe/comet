@@ -1,0 +1,51 @@
+.light {
+	// LIGHT MODE
+	--body-bg: #f2f2f2;
+	--theme-bg: #fafafa;
+	--border-color: #efefef;
+	--header-bg: #fff;
+	--card-bg: transparent;
+
+	--theme-color-1: #b3b3b3;
+	--theme-color-2: #808080;
+	--theme-color-3: #494949;
+
+	::selection {
+		background: rgba($color: #707070, $alpha: 0.2);
+		color: black;
+	}
+}
+
+.dark {
+	--body-bg: #1e222b;
+	--theme-bg: #212835;
+	--border-color: #444b5f;
+	--header-bg: #212835;
+	--card-bg: #2f3646;
+
+	--theme-color-1: #d1d1d1;
+	--theme-color-2: #e2e2e2;
+	--theme-color-3: #fcfcfc;
+
+	::selection {
+		background: var(--theme-color-3);
+		color: var(--body-bg);
+	}
+}
+
+.amoled {
+	--body-bg: #000;
+	--theme-bg: #000;
+	--border-color: #222;
+	--header-bg: #000;
+	--card-bg: #000;
+
+	--theme-color-1: #d1d1d1;
+	--theme-color-2: #e2e2e2;
+	--theme-color-3: #fcfcfc;
+
+	::selection {
+		background: var(--theme-color-3);
+		color: var(--body-bg);
+	}
+}

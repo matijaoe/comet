@@ -1,0 +1,125 @@
+.dropdown {
+	opacity: 0;
+	visibility: hidden;
+	border-radius: 0.6rem;
+	background: white;
+	position: absolute;
+	z-index: 10;
+	top: calc(100% + 1rem);
+	right: 1.2rem;
+	box-shadow: $card-shadow;
+
+	display: flex;
+	align-items: flex-start;
+
+	padding: 1.6em 2em;
+	border: $border;
+	background-color: var(--header-bg);
+	color: var(--theme-color-3);
+
+	transition: all 250ms;
+
+	@include respond(md) {
+		flex-direction: column;
+	}
+
+	label {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 0.9em;
+		margin-bottom: 0.6em;
+	}
+
+	&__chooser {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		&--theme {
+			margin-right: 1.6em;
+
+			@include respond(sm) {
+				margin-right: 0;
+				margin-bottom: 1.6em;
+			}
+		}
+	}
+
+	&__options {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.5em;
+		justify-items: center;
+	}
+
+	&__option {
+		width: 3rem;
+		height: 3rem;
+		background: red;
+		border-radius: 50%;
+
+		border: $border;
+		transition: all 250ms;
+
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+
+	&__theme-option {
+	}
+
+	&__accent-option {
+	}
+}
+
+/* Themes */
+#light-option {
+	background: white;
+}
+
+#dark-option {
+	background: #212835;
+}
+
+#amoled-option {
+	background: #000;
+}
+
+/* Accents */
+#red-1 {
+	background: var(--red-1);
+}
+
+#orange-1 {
+	background: var(--orange-1);
+}
+
+#blue-1 {
+	background: var(--blue-1);
+}
+
+#purple-1 {
+	background: var(--purple-1);
+}
+
+#green-1 {
+	background: var(--green-1);
+}
+
+#pink-1 {
+	background: var(--pink-1);
+}
+#purple-2 {
+	background: var(--purple-2);
+}
+
+#green-2 {
+	background: var(--green-2);
+}
+
+#pink-2 {
+	background: var(--pink-2);
+}

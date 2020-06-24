@@ -5,10 +5,6 @@
 		padding: 0 1em;
 	}
 
-	@include respond(xxs) {
-		padding: 0;
-	}
-
 	&__header {
 		display: flex;
 		justify-content: center;
@@ -16,6 +12,8 @@
 
 		padding: 0 2.2em;
 		margin: 2em 0;
+
+		animation: fade-in-top 800ms cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
 		@include respond(xs) {
 			margin: 1.2em 0;
@@ -73,7 +71,7 @@
 			color: var(--body-bg);
 
 			.icon {
-				transform: translateX(101%) scale(1.6);
+				transform: translateX(95%) scale(1.4);
 
 				@include respond(lg) {
 					transform: translateX(0) scale(1.4);
@@ -115,8 +113,12 @@
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		gap: 1.5em;
 
+		animation: fade-in-bottom 800ms cubic-bezier(0.39, 0.575, 0.565, 1) 250ms
+			backwards;
+
 		@include respond(sm) {
 			grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+			gap: 1.2em;
 		}
 	}
 
@@ -243,7 +245,7 @@
 		}
 
 		&.primary {
-			color: var(--theme-color-3);
+			color: var(--theme-color-2);
 		}
 	}
 
@@ -271,7 +273,7 @@
 	background: var(--card-bg);
 	border-radius: 0.7rem;
 	overflow: hidden;
-	box-shadow: 0.2rem 0.3rem 0.6rem 0.2rem rgba($color: black, $alpha: 0.04);
+	box-shadow: $card-shadow;
 
 	cursor: pointer;
 

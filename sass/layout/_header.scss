@@ -9,6 +9,8 @@
 	border-bottom: $border;
 	box-shadow: 0 0.3rem 0.5rem rgba($color: black, $alpha: 0.01);
 
+	position: relative;
+
 	@include respond(sm) {
 		padding: 1em 1.8em;
 	}
@@ -191,7 +193,7 @@
 		cursor: pointer;
 	}
 
-	.btn--outline {
+	.btn--upload {
 		@include respond(xl) {
 			padding: 0.75em;
 
@@ -201,9 +203,10 @@
 		}
 	}
 
-	.icon-upload {
+	.icon--upload {
 		width: 2.2rem;
 		height: 2.2rem;
+		fill: var(--theme-color-1);
 
 		@include respond(xl) {
 			margin: 0;
@@ -253,3 +256,5 @@
 		align-items: center;
 	}
 }
+
+

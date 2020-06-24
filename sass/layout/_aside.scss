@@ -15,9 +15,6 @@
 		flex-basis: 22rem;
 	}
 
-	@include respond(lg) {
-		flex-basis: 22rem;
-	}
 	@include respond(md) {
 		display: none;
 	}
@@ -28,6 +25,10 @@
 	&.hide {
 		flex-basis: 0;
 		border-color: transparent;
+
+		&__list {
+			opacity: 0;
+		}
 	}
 
 	> * {
@@ -43,17 +44,22 @@
 		transition: all 200ms;
 	}
 
+	&__item {
+	}
+
 	&__link {
 		display: flex;
 		align-items: center;
 		padding: 0.6em 0;
+		overflow: hidden;
+		white-space: nowrap;
 
 		&:hover,
 		&:focus {
 			color: var(--theme-color-3);
 
 			& .aside__icon {
-				color: var(--accent);
+				fill: var(--accent);
 			}
 		}
 	}
@@ -83,10 +89,14 @@
 		font-size: 1.1em;
 		color: var(--theme-color-3);
 		margin-bottom: 1.2em;
+
+
 	}
 
 	button {
 		margin-top: 1.4em;
+		overflow: hidden;
+		white-space: nowrap;
 	}
 }
 

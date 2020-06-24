@@ -3,14 +3,14 @@
 	justify-content: space-between;
 	align-items: center;
 	font-size: 0.9em;
-	padding: 3em 2em;
+	padding: 2em;
 
 	@include respond(xl) {
-		padding: 2.5em 1.6em;
+		padding: 1.6em;
 	}
 
 	@include respond(sm) {
-		padding: 2em 1em;
+		padding: 1em;
 		flex-direction: column;
 
 		> * {
@@ -37,65 +37,76 @@
 		box-shadow: 0 0 0rem 0rem rgba($color: #3b5998, $alpha: 0.5);
 		color: currentColor;
 
-		transition: all 350ms cubic-bezier(.99,1,.64,1.32);
-		
+		transition: all 400ms ease-in-out;
 
 		overflow: hidden;
 		cursor: pointer;
 
+		border: $border;
 		.icon {
 			fill: currentColor;
-			transition: all 100ms ease-in-out;
+			transition: all 400ms ease-in-out;
 		}
 
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			transform: rotate(10deg);
 		}
 	}
 
-	.facebook {
-		color: #3b5998;
+	.facebook:hover {
+		border-color: #3b5998;
+
+		.icon {
+			fill: #3b5998;
+		}
 	}
-	.instagram {
-		color: #c11584;
+	.instagram:hover {
+		border-color: #e1306c;
+
+		.icon {
+			fill: #e1306c;
+		}
 	}
-	.twitter {
-		color: #1da1f2;
+	.twitter:hover {
+		border-color: #1da1f2;
+		.icon {
+			fill: #1da1f2;
+		}
+	}
+	.reddit:hover {
+		border-color: #ff4500;
+		.icon {
+			fill: #ff4500;
+		}
+	}
+	.github:hover {
+		border-color: #4078c0;
+		.icon {
+			fill: #4078c0;
+		}
 	}
 
-	.reddit {
-		color: #ff4500;
-	}
-	.github {
-		color: #4078c0;
-	}
-
-	.facebook:hover,
-	.facebook:focus {
-		box-shadow: 0 0 4rem 0.05em rgba($color: #1b5998, $alpha: 0.8);
-	}
-	.instagram:hover,
-	.instagram:focus {
-		box-shadow: 0 0 4rem 0.05em rgba($color: #c13584, $alpha: 0.8);
-	}
-	.twitter:hover,
-	.twitter:focus {
-		box-shadow: 0 0 4rem 0.05em rgba($color: #1da1f2, $alpha: 0.8);
-	}
-	.reddit:hover,
-	.reddit:focus {
-		box-shadow: 0 0 4rem 0.05em rgba($color: #ff4500, $alpha: 0.8);
-	}
-	.github:hover,
-	.github:focus {
-		box-shadow: 0 0 4rem 0.05em rgba($color: #4078c0, $alpha: 0.8);
-	}
-
-	.icon {
-		height: 1.6em;
-		width: 1.6em;
-		fill: currentColor;
-	}
+	// .facebook:hover,
+	// .facebook:focus {
+	// 	box-shadow: 0 0 4rem 0.05em rgba($color: #1b5998, $alpha: 0.8);
+	// }
+	// .instagram:hover,
+	// .instagram:focus {
+	// 	box-shadow: 0 0 4rem 0.05em rgba($color: #e1306c, $alpha: 0.8);
+	// }
+	// .twitter:hover,
+	// .twitter:focus {
+	// 	box-shadow: 0 0 4rem 0.05em rgba($color: #1da1f2, $alpha: 0.8);
+	// }
+	// .reddit:hover,
+	// .reddit:focus {
+	// 	box-shadow: 0 0 4rem 0.05em rgba($color: #ff4500, $alpha: 0.8);
+	// }
+	// .github:hover,
+	// .github:focus {
+	// 	box-shadow: 0 0 4rem 0.05em rgba($color: #4078c0, $alpha: 0.8);
+	// }
 
 	&__link {
 		&:hover {
