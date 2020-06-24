@@ -49,3 +49,21 @@
 		color: var(--body-bg);
 	}
 }
+
+.mono {
+	// LIGHT MODE
+	--body-bg: #f2f2f2;
+	--theme-bg: #fafafa;
+	--border-color: black;
+	--header-bg: #fff;
+	--card-bg: transparent;
+
+	--theme-color-1: #b3b3b3;
+	--theme-color-2: #808080;
+	--theme-color-3: #494949;
+
+	::selection {
+		background: rgba($color: #707070, $alpha: 0.2);
+		color: black;
+	}
+}

@@ -42,7 +42,7 @@
 
 			@include respond(sm) {
 				margin-right: 0;
-				margin-bottom: 1.6em;
+				margin-bottom: 2em;
 			}
 		}
 	}
@@ -52,6 +52,16 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 0.5em;
 		justify-items: center;
+	}
+
+	span {
+		font-size: 0.9em;
+		position: absolute;
+		top: 10rem;
+
+		visibility: hidden;
+		opacity: 0;
+		transition: all 250ms;
 	}
 
 	&__option {
@@ -66,12 +76,16 @@
 		&:hover {
 			transform: scale(1.2);
 		}
-	}
 
-	&__theme-option {
-	}
+		&:hover + span {
+			visibility: visible;
+			opacity: 1;
 
-	&__accent-option {
+			@include respond(sm) {
+				visibility: hidden;
+				opacity: 0;
+			}
+		}
 	}
 }
 
