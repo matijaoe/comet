@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="light">
         <div class="app-wrapper">
             <header class="header">
                 <div class="header__left">
@@ -45,7 +45,10 @@
 
                     <box-icon name='bell' type='solid' animation='tada-hover' class="user-nav__icon--notifications icon"></box-icon>
                     <img class="user-nav__user-photo" src="img/user1.jpg" alt="user" width="40" height="40">
-                    <box-icon name='chevron-down' type='solid' class="user-nav__icon--dropdown icon" id="dropdown-icon"></box-icon>
+                    <div class="user__nav--dropdown-box" id="dropdown-box">
+                        <box-icon name='chevron-down' type='solid' class="user-nav__icon--dropdown icon" id="dropdown-icon"></box-icon>
+                    </div>
+
                     <div class="user-nav__dropdown dropdown closed" id="dropdown">
                         <div class="dropdown__chooser dropdown__chooser--theme">
                             <label>Theme</label>

@@ -99,21 +99,12 @@ amoledBtn.onclick = () => {
     localStorage.setItem('theme', 'amoled');
 }
 
-// lightTheme.addEventListener('click', () => {
-// }
-// dark.addEventListener('click', () => {
-//     body.classList.replace("dark", "amoled");
-//     localStorage.setItem('theme', 'amoled');
-// };
-// amoled.addEventListener('click', () => {
-//     body.classList.add('light');
-//     localStorage.setItem('theme', 'light');
-// };
+
 
 
 
 /* DROPDOWN OPEN/CLOSE */
-const dropdownIcon = document.getElementById('dropdown-icon');
+const dropdownIcon = document.getElementById('dropdown-box');
 const dropdown = document.getElementById('dropdown');
 
 dropdownIcon.addEventListener('click', () => {
@@ -129,17 +120,17 @@ dropdownIcon.addEventListener('click', () => {
 });
 
 //I'm using "click" but it works with any event
-if (dropdown.classList.contains('open')) {
+// if (dropdown.classList.contains('open')) {
 
-    body.addEventListener('click', function (event) {
-        var isClickInside = dropdown.contains(event.target);
+//     body.addEventListener('click', function (event) {
+//         var isClickInside = dropdown.contains(event.target);
 
-        if (!isClickInside) {
-            dropdown.style.visibility = 'hidden';
-            dropdown.style.opacity = '0';
-        }
-    });
-}
+//         if (!isClickInside) {
+//             dropdown.style.visibility = 'hidden';
+//             dropdown.style.opacity = '0';
+//         }
+//     });
+// }
 
 
 

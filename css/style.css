@@ -367,7 +367,7 @@ img {
       border-top-right-radius: 0; } }
   .profile__hero {
     min-height: 22rem;
-    background: url(../img/adventure-calm-clouds-dawn-414171.jpg) no-repeat;
+    background: url(../img/hero.jpg) no-repeat;
     background-size: cover;
     background-clip: border-box;
     background-position: center;
@@ -969,6 +969,8 @@ img {
     @media only screen and (max-width: 390px) {
       .header__menu-icon {
         display: none; } }
+    .header__menu-icon:hover, .header__menu-icon:focus {
+      fill: var(--theme-color-2); }
   .header__logo {
     border-radius: 50%;
     height: 3.8rem;
@@ -1122,10 +1124,14 @@ img {
     @media only screen and (max-width: 530px) {
       .user-nav__icon--notifications {
         display: none; } }
+  .user-nav #dropdown-box {
+    padding: 0.6em 0; }
   .user-nav__icon--dropdown {
     color: var(--theme-color-1);
     display: flex;
     align-items: center; }
+  .user-nav .icon:hover, .user-nav .icon:focus {
+    fill: var(--theme-color-2); }
 
 .footer {
   display: flex;

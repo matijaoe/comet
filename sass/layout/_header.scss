@@ -37,6 +37,10 @@
 		@include respond(xxs) {
 			display: none;
 		}
+
+		&:hover, &:focus {
+			fill: var(--theme-color-2);
+		}
 	}
 
 	&__logo {
@@ -250,11 +254,20 @@
 		}
 	}
 
+	#dropdown-box {
+		padding: 0.6em 0;
+	}
+
 	&__icon--dropdown {
 		color: var(--theme-color-1);
 		display: flex;
 		align-items: center;
 	}
+
+	.icon {
+		&:hover,
+		&:focus {
+			fill: var(--theme-color-2);
+		}
+	}
 }
-
-
