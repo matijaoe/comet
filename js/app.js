@@ -57,7 +57,7 @@ uploadBtn.addEventListener('mouseleave', () => {
 //     }
 // });
 
-/* THEME CHOOSER */
+/* THEME PICKER */
 const lightBtn = document.getElementById('light-option');
 const darkBtn = document.getElementById('dark-option');
 const amoledBtn = document.getElementById('amoled-option');
@@ -80,7 +80,6 @@ darkBtn.onclick = () => {
         body.classList.replace('amoled', 'dark');
     } else {
         body.classList.add('dark');
-
     }
 
     localStorage.setItem('theme', 'dark');
@@ -147,3 +146,70 @@ menuButton.addEventListener('click', () => {
 
 
 //TODO on upload hover add property to icon "animation:whteverthefuck"
+
+
+/* ACCENT PICKER */
+const red1 = document.getElementById('red-1');
+const orange1 = document.getElementById('orange-1');
+const blue1 = document.getElementById('blue-1');
+const purple1 = document.getElementById('purple-1');
+const green1 = document.getElementById('green-1');
+const pink1 = document.getElementById('pink-1');
+const purple2 = document.getElementById('purple-2');
+const green2 = document.getElementById('green-2');
+const pink2 = document.getElementById('pink-2');
+let root = document.documentElement;
+
+
+red1.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--red-1'));
+});
+
+orange1.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--orange-1'));
+});
+
+blue1.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--blue-1'));
+});
+
+purple1.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--purple-1'));
+});
+
+green1.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--green-1'));
+});
+
+pink1.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--pink-1'));
+});
+
+purple2.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--purple-2'));
+});
+green2.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--green-2'));
+});
+pink2.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--pink-2'));
+});
+

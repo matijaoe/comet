@@ -37,7 +37,7 @@
 		box-shadow: 0 0 0rem 0rem rgba($color: #3b5998, $alpha: 0.5);
 		color: currentColor;
 
-		transition: all 400ms ease-in-out;
+		transition: all 100ms;
 
 		overflow: hidden;
 		cursor: pointer;
@@ -45,12 +45,7 @@
 		border: $border;
 		.icon {
 			fill: currentColor;
-			transition: all 400ms ease-in-out;
-		}
-
-		&:hover,
-		&:focus {
-			transform: rotate(10deg);
+			transition: all 100ms;
 		}
 	}
 

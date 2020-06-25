@@ -22,9 +22,26 @@ $card-shadow: 0.2rem 0.3rem .8rem 0.1rem rgba($color: black, $alpha: 0.05);
 	--pink-2: #ff1f5a;
 
 	// UNIVERSAL
-	--logo-color: #f13a2f;
+	--logo-color: var(--red-1);
 	--accent: var(--logo-color);
 
 	--theme-color-1-opaque: hsla(0, 0%, 70%, 0.3);
 	--black-opaque: rgba(0, 0, 0, 0.25);
+
+
+	// LIGHT MODE
+	--body-bg: #f2f2f2;
+	--theme-bg: #fafafa;
+	--border-color: #efefef;
+	--header-bg: #fff;
+	--card-bg: transparent;
+
+	--theme-color-1: #b3b3b3;
+	--theme-color-2: #808080;
+	--theme-color-3: #494949;
+
+	::selection {
+		background: rgba($color: #707070, $alpha: 0.2);
+		color: black;
+	}
 }

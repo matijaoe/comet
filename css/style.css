@@ -15,10 +15,21 @@
   --brown-2: #94877b;
   --pink-1: #e28397;
   --pink-2: #ff1f5a;
-  --logo-color: #f13a2f;
+  --logo-color: var(--red-1);
   --accent: var(--logo-color);
   --theme-color-1-opaque: hsla(0, 0%, 70%, 0.3);
-  --black-opaque: rgba(0, 0, 0, 0.25); }
+  --black-opaque: rgba(0, 0, 0, 0.25);
+  --body-bg: #f2f2f2;
+  --theme-bg: #fafafa;
+  --border-color: #efefef;
+  --header-bg: #fff;
+  --card-bg: transparent;
+  --theme-color-1: #b3b3b3;
+  --theme-color-2: #808080;
+  --theme-color-3: #494949; }
+  :root ::selection {
+    background: rgba(112, 112, 112, 0.2);
+    color: black; }
 
 /* 1040px */
 /* 900px */
@@ -113,19 +124,6 @@
   100% {
     transform: translateZ(0);
     opacity: 1; } }
-
-.light {
-  --body-bg: #f2f2f2;
-  --theme-bg: #fafafa;
-  --border-color: #efefef;
-  --header-bg: #fff;
-  --card-bg: transparent;
-  --theme-color-1: #b3b3b3;
-  --theme-color-2: #808080;
-  --theme-color-3: #494949; }
-  .light ::selection {
-    background: rgba(112, 112, 112, 0.2);
-    color: black; }
 
 .dark {
   --body-bg: #1e222b;
@@ -1194,15 +1192,13 @@ img {
     margin: 0 0.3em;
     box-shadow: 0 0 0rem 0rem rgba(59, 89, 152, 0.5);
     color: currentColor;
-    transition: all 400ms ease-in-out;
+    transition: all 100ms;
     overflow: hidden;
     cursor: pointer;
     border: 3px solid var(--border-color); }
     .footer__icon-box .icon {
       fill: currentColor;
-      transition: all 400ms ease-in-out; }
-    .footer__icon-box:hover, .footer__icon-box:focus {
-      transform: rotate(10deg); }
+      transition: all 100ms; }
   .footer .facebook:hover {
     border-color: #3b5998; }
     .footer .facebook:hover .icon {
