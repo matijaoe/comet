@@ -45,6 +45,9 @@
 				margin-bottom: 2em;
 			}
 		}
+
+		&--accents {
+		}
 	}
 
 	&__options {
@@ -52,6 +55,14 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 0.5em;
 		justify-items: center;
+
+		&--accents {
+			grid-template-columns: repeat(4, 1fr);
+
+			@include respond(sm) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
 	}
 
 	span {
@@ -106,35 +117,49 @@
 #red-1 {
 	background: var(--red-1);
 }
-
-#orange-1 {
-	background: var(--orange-1);
+#red-3 {
+	background: var(--red-3);
 }
 
-#blue-1 {
-	background: var(--blue-1);
+#pink-1 {
+	background: var(--pink-1);
+}
+#pink-2 {
+	background: var(--pink-2);
 }
 
 #purple-1 {
 	background: var(--purple-1);
 }
 
-#green-1 {
-	background: var(--green-1);
-}
-
-#pink-1 {
-	background: var(--pink-1);
-}
-
 #purple-2 {
 	background: var(--purple-2);
 }
 
+#blue-1 {
+	background: var(--blue-1);
+}
+#blue-2 {
+	background: var(--blue-2);
+}
+
+#green-1 {
+	background: var(--green-1);
+}
 #green-2 {
 	background: var(--green-2);
 }
 
-#pink-2 {
-	background: var(--pink-2);
+#yellow-1 {
+	background: var(--yellow-1);
+}
+
+#orange-1 {
+	background: var(--orange-1);
+}
+#orange-2 {
+	background: var(--orange-2);
+}
+#brown-2 {
+	background: var(--brown-2);
 }

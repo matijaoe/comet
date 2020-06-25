@@ -19,6 +19,7 @@ videos.forEach(v => {
 
 /* BROWSER LOCAL STORAGE FOR THE THEME */
 const theme = localStorage.getItem('theme');
+const accent = localStorage.getItem('accent');
 
 if (theme) {
     body.classList.add(theme);
@@ -150,66 +151,119 @@ menuButton.addEventListener('click', () => {
 
 /* ACCENT PICKER */
 const red1 = document.getElementById('red-1');
-const orange1 = document.getElementById('orange-1');
-const blue1 = document.getElementById('blue-1');
-const purple1 = document.getElementById('purple-1');
-const green1 = document.getElementById('green-1');
-const pink1 = document.getElementById('pink-1');
-const purple2 = document.getElementById('purple-2');
-const green2 = document.getElementById('green-2');
+const red3 = document.getElementById('red-3');
+
 const pink2 = document.getElementById('pink-2');
+
+const purple1 = document.getElementById('purple-1');
+const purple2 = document.getElementById('purple-2')
+
+const blue1 = document.getElementById('blue-1');
+const blue2 = document.getElementById('blue-2');
+
+const green1 = document.getElementById('green-1');
+const green2 = document.getElementById('green-2');
+
+const orange1 = document.getElementById('orange-1');
+const orange2 = document.getElementById('orange-2');
+const brown2 = document.getElementById('brown-2');
+
+
+
+
 let root = document.documentElement;
 
-
+/* RED */
 red1.addEventListener('click', () => {
     root.style.setProperty('--accent',
         getComputedStyle(document.documentElement)
             .getPropertyValue('--red-1'));
+
 });
 
-orange1.addEventListener('click', () => {
+red3.addEventListener('click', () => {
     root.style.setProperty('--accent',
         getComputedStyle(document.documentElement)
-            .getPropertyValue('--orange-1'));
+            .getPropertyValue('--red-3'));
+
 });
 
-blue1.addEventListener('click', () => {
+/* PINK */
+pink2.addEventListener('click', () => {
     root.style.setProperty('--accent',
         getComputedStyle(document.documentElement)
-            .getPropertyValue('--blue-1'));
+            .getPropertyValue('--pink-2'));
+
 });
 
+/* PURPLE */
 purple1.addEventListener('click', () => {
     root.style.setProperty('--accent',
         getComputedStyle(document.documentElement)
             .getPropertyValue('--purple-1'));
-});
 
-green1.addEventListener('click', () => {
-    root.style.setProperty('--accent',
-        getComputedStyle(document.documentElement)
-            .getPropertyValue('--green-1'));
-});
-
-pink1.addEventListener('click', () => {
-    root.style.setProperty('--accent',
-        getComputedStyle(document.documentElement)
-            .getPropertyValue('--pink-1'));
 });
 
 purple2.addEventListener('click', () => {
     root.style.setProperty('--accent',
         getComputedStyle(document.documentElement)
             .getPropertyValue('--purple-2'));
+
+});
+
+/* BLUE */
+blue1.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--blue-1'));
+
+});
+
+blue2.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--blue-2'));
+
+});
+
+/* GREEN */
+green1.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--green-1'));
+
 });
 green2.addEventListener('click', () => {
     root.style.setProperty('--accent',
         getComputedStyle(document.documentElement)
             .getPropertyValue('--green-2'));
+
 });
-pink2.addEventListener('click', () => {
+
+
+/* ORANGE */
+orange1.addEventListener('click', () => {
     root.style.setProperty('--accent',
         getComputedStyle(document.documentElement)
-            .getPropertyValue('--pink-2'));
+            .getPropertyValue('--orange-1'));
+
 });
+
+orange2.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--orange-2'));
+});
+brown2.addEventListener('click', () => {
+    root.style.setProperty('--accent',
+        getComputedStyle(document.documentElement)
+            .getPropertyValue('--brown-2'));
+});
+
+
+
+
+
+
+
 

@@ -15,8 +15,7 @@
 		padding: 1em 1.8em;
 	}
 	@include respond(xs) {
-		padding: .8em 1.4em;
-		
+		padding: 0.8em 1.4em;
 	}
 
 	@include respond(xxs) {
@@ -186,7 +185,7 @@
 			width: 0.6rem;
 			height: 0.6rem;
 			border-radius: 50%;
-			background: var(--logo-color);
+			background: var(--accent);
 			position: absolute;
 			top: 0.4rem;
 			right: -0.6rem;

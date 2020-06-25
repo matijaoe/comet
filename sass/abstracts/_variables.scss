@@ -1,25 +1,39 @@
 $border: 3px solid var(--border-color);
-$card-shadow: 0.2rem 0.3rem .8rem 0.1rem rgba($color: black, $alpha: 0.05);
+$card-shadow: 0.2rem 0.3rem 0.8rem 0.1rem
+	rgba(
+		$color: black,
+		$alpha: 0.05,
+	);
 
 :root {
 	--body-font: "DM Sans", "Work Sans", sans-serif;
 
 	// COLORS
 	--red-1: #ea2027;
-	--red-2: #9e262c;
-	--green-1: #0f9775;
-	--green-2: #18ca5c;
+	--red-2: #fc5c65;
+	--red-3: #ee5253;
+
+	--green-1: #10ac84;
+	--green-2: #2ed573;
+
 	--blue-1: #2f89fc;
-	--blue-2: #2cb7d6;
-	--purple-1: #814bec;
-	--purple-2: #9c1de7;
-	--purple-3: #6a5287;
+	--blue-2: #54a0ff;
+
+	--purple-1: #9e6ddf;
+	--purple-2: #9d4ccd;
+
+	--yellow-1: #feca57;
+
 	--orange-1: #ffa010;
-	--orange-2: #c5730f;
+	--orange-2: #ff793f;
+
 	--brown-1: #695555;
 	--brown-2: #94877b;
-	--pink-1: #e28397;
-	--pink-2: #ff1f5a;
+
+	--pink-1: #f78fb3;
+	--pink-2: #f74171;
+	--pink-3: #ff9ff3;
+	--pink-4: #f368e0;
 
 	// UNIVERSAL
 	--logo-color: var(--red-1);
@@ -27,7 +41,6 @@ $card-shadow: 0.2rem 0.3rem .8rem 0.1rem rgba($color: black, $alpha: 0.05);
 
 	--theme-color-1-opaque: hsla(0, 0%, 70%, 0.3);
 	--black-opaque: rgba(0, 0, 0, 0.25);
-
 
 	// LIGHT MODE
 	--body-bg: #f2f2f2;
