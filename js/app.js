@@ -254,6 +254,8 @@ orange2.addEventListener('click', () => {
         getComputedStyle(document.documentElement)
             .getPropertyValue('--orange-2'));
 });
+
+/* BROWN */
 brown2.addEventListener('click', () => {
     root.style.setProperty('--accent',
         getComputedStyle(document.documentElement)
