@@ -170,7 +170,6 @@
 
 	&__link {
 		padding: 0.4em;
-	
 
 		/* for the pseudoelement */
 		position: relative;
@@ -249,6 +248,7 @@
 		display: flex;
 		align-items: center;
 		margin-left: 2em;
+		flex-shrink: 0;
 
 		@include respond(xl) {
 			margin-left: 1em;
