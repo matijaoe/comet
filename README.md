@@ -6,4 +6,4 @@ Built with Sass, BEM and some JavaScript.
 
 *Fully responsive. Cool video hover effect. Different theme options, stored locally in a user's browser. Accent color picker.*
 
-[Live Demo](https://mat2ja.github.io/comet/)
+## [Live Demo](https://mat2ja.github.io/comet/)
