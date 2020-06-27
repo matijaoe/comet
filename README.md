@@ -2,7 +2,7 @@
 # Comet Video App 
 Video streaming platform mockup, based on a Dribble concept. Coded and customized all by myself.
 
-❮img src="img/screenshots/screenshot1.png" ❯
+<img src="img/screenshots/screenshot1.png">
 
 Built with Sass, BEM and some JavaScript.
 
