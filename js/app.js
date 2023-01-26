@@ -227,11 +227,3 @@ brown2.addEventListener('click', () => {
         getComputedStyle(document.documentElement)
             .getPropertyValue('--brown-2'));
 });
-
-
-
-
-
-
-
-
