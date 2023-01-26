@@ -1,4 +1,3 @@
-
 const body = document.body;
 
 
@@ -37,26 +36,6 @@ uploadBtn.addEventListener('mouseover', () => {
 uploadBtn.addEventListener('mouseleave', () => {
     uploadIcon.setAttribute("animation", "");
 });
-
-
-/* THEME TOGGLER ON THE LOGO */
-// const toggleBtn = document.getElementById('theme-toggler');
-
-// toggleBtn.addEventListener('click', () => {
-//     if (body.classList.contains('light')) {
-//         body.classList.replace("light", "dark");
-//         localStorage.setItem('theme', 'dark');
-//     } else if (body.classList.contains('dark')) {
-//         body.classList.replace("dark", "amoled");
-//         localStorage.setItem('theme', 'amoled');
-//     } else if (body.classList.contains('amoled')) {
-//         body.classList.replace("amoled", "light");
-//         localStorage.setItem('theme', 'light');
-//     } else {
-//         body.classList.add('light');
-//         localStorage.setItem('theme', 'light');
-//     }
-// });
 
 /* THEME PICKER */
 const lightBtn = document.getElementById('light-option');
@@ -102,35 +81,30 @@ amoledBtn.onclick = () => {
 
 
 
-
 /* DROPDOWN OPEN/CLOSE */
 const dropdownIcon = document.getElementById('dropdown-box');
 const dropdown = document.getElementById('dropdown');
 
+
+function openDropdown() {
+    dropdown.style.visibility = 'visible';
+    dropdown.style.opacity = '1';
+    dropdown.classList.replace('closed', 'open');
+}
+function closeDropdown() {
+    dropdown.style.visibility = 'hidden';
+    dropdown.style.opacity = '0';
+    dropdown.classList.replace('open', 'closed');
+}
+
 dropdownIcon.addEventListener('click', () => {
     if (dropdown.classList.contains('closed')) {
-        dropdown.style.visibility = 'visible';
-        dropdown.style.opacity = '1';
-        dropdown.classList.replace('closed', 'open');
+        openDropdown()
     } else if (dropdown.classList.contains('open')) {
-        dropdown.style.visibility = 'hidden';
-        dropdown.style.opacity = '0';
-        dropdown.classList.replace('open', 'closed');
+        closeDropdown()
     }
 });
 
-//I'm using "click" but it works with any event
-// if (dropdown.classList.contains('open')) {
-
-//     body.addEventListener('click', function (event) {
-//         var isClickInside = dropdown.contains(event.target);
-
-//         if (!isClickInside) {
-//             dropdown.style.visibility = 'hidden';
-//             dropdown.style.opacity = '0';
-//         }
-//     });
-// }
 
 
 
@@ -141,12 +115,6 @@ const aside = document.getElementById('aside-nav');
 menuButton.addEventListener('click', () => {
     aside.classList.toggle('hide');
 });
-
-
-
-
-
-//TODO on upload hover add property to icon "animation:whteverthefuck"
 
 
 /* ACCENT PICKER */
@@ -167,8 +135,6 @@ const green2 = document.getElementById('green-2');
 const orange1 = document.getElementById('orange-1');
 const orange2 = document.getElementById('orange-2');
 const brown2 = document.getElementById('brown-2');
-
-
 
 
 let root = document.documentElement;
