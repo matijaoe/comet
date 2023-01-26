@@ -79,8 +79,6 @@ amoledBtn.onclick = () => {
 }
 
 
-
-
 /* DROPDOWN OPEN/CLOSE */
 const dropdownIcon = document.getElementById('dropdown-box');
 const dropdown = document.getElementById('dropdown');
@@ -104,9 +102,6 @@ dropdownIcon.addEventListener('click', () => {
         closeDropdown()
     }
 });
-
-
-
 
 /* HAMBURGER MENU  */
 const menuButton = document.getElementById('hamburger-menu');
